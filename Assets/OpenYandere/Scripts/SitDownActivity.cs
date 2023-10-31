@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace OpenYandere.Characters.NPC
 {
+    [CreateAssetMenu(fileName = "SitDownActivity", menuName = "NPC/LomotionActivity/SitDownActivity")]
     [System.Serializable]
     public class SitDownActivity : ActivityBase
     {

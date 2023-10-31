@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-
+using UnityEngine;
 namespace OpenYandere.Characters.NPC
 {
     [System.Serializable]
-    public abstract class ActivityBase
+    public abstract class ActivityBase: ScriptableObject
     {
         public int startTimeMilitary;
         public int endTimeMilitary;
