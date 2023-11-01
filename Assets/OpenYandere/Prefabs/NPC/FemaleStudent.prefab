@@ -2124,7 +2124,7 @@ GameObject:
   - component: {fileID: 135981748367628120}
   - component: {fileID: 114997327948396088}
   - component: {fileID: 6553617411788002219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interactables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2156,7 +2156,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -4326,6 +4326,7 @@ GameObject:
   - component: {fileID: 2112371386800120999}
   - component: {fileID: 3104591925296491483}
   - component: {fileID: 2772643949667053492}
+  - component: {fileID: 3364738493290823807}
   m_Layer: 0
   m_Name: FemaleStudent
   m_TagString: Untagged
@@ -4461,6 +4462,8 @@ MonoBehaviour:
   viewMask:
     serializedVersion: 2
     m_Bits: 64
+  dailyRoutine:
+    activities: []
   personality: {fileID: 11400000, guid: 3ee4cee9e1f661943b58632410e26376, type: 2}
 --- !u!114 &2112371386800120999
 MonoBehaviour:
@@ -4663,6 +4666,29 @@ MonoBehaviour:
   - m_Rig: {fileID: 8009293292926840922}
     m_Active: 1
   m_Effectors: []
+--- !u!136 &3364738493290823807
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684547308732712}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.26
+  m_Height: 1.96
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.79, z: 0}
 --- !u!1 &1688671137200802
 GameObject:
   m_ObjectHideFlags: 0

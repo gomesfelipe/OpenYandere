@@ -165,6 +165,7 @@ namespace OpenYandere.UI.TalkCanvas
         public void OnExitButtonClicked()
         {
             HideBox();
+            CursorManager.Instance.lockCursor();
 	        // TODO
         }
     }

@@ -47,6 +47,7 @@ internal class PopupMessage : Singleton<PopupMessage>
     }
     public void DisplayMessage(string message)
     {
+      
         messageQueue.Enqueue(message);
         if (!isDisplaying)
         {

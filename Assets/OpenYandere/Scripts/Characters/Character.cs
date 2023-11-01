@@ -9,7 +9,8 @@ namespace OpenYandere.Characters
         protected Animator animator;
         public int Id;
         public string characterName;
-        public int maxHealth = 100, health;
+        public int maxHealth = 100;
+        public int health;
         [Range(-100, 100)] public int trustLevel;
         public Sprite faceSprite;
         public bool IsAlive = true,canTakeDamage=true;
@@ -27,6 +28,7 @@ namespace OpenYandere.Characters
         }
         protected void Start()
         {
+          
             if (health <= 0)
             {
                 Die();
@@ -44,9 +46,10 @@ namespace OpenYandere.Characters
         }
         protected void Die()
         {
+            Debug.Log(characterName + " has died!");
             IsAlive = false;           
             ragdollEnabler.EnableRagdoll();
-            animator.SetTrigger("Die");
+            //animator.SetTrigger("Die");
 
         }
 
