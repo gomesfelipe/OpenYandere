@@ -20,8 +20,9 @@ internal class PopupMessage : Singleton<PopupMessage>
     protected float timer;
     protected bool isDisplaying = false;
 
-    void Awake()
+    private void Awake()
     {
+        base.Awake();
         onDisplayMessage ??= new UnityEvent<string>();
         onDisplayMessage.AddListener(DisplayMessage);
         _rectTransform = GetComponent<RectTransform>();

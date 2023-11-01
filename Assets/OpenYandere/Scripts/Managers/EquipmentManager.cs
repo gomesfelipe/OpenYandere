@@ -86,7 +86,10 @@ namespace OpenYandere.Managers
                 UnequipItem(equipPosition);
             }
 
-            GameObject itemInstance = itemPools[newItem].Get();
+            // GameObject itemInstance = itemPools[newItem].Get();
+            ObjectPool<GameObject> pool;
+            itemPools.TryGetValue(newItem, out pool);
+            GameObject itemInstance=pool.Get();
             if (itemInstance == null)
             {
                 Debug.LogWarning($"Could not retrieve an instance of {newItem.ItemName} from the ObjectPool.");

@@ -17,12 +17,13 @@ internal class InventoryUI : Singleton<InventoryUI>
     [SerializeField] protected Button btnUse, btnDrop;
     // Supondo que você tenha um GameObject para o inventário UI.
     public GameObject inventoryUI;
-    protected CanvasGroup _canvasGroup;
+    public CanvasGroup _canvasGroup;
     private bool isInventoryOpen = false;
 
     protected void Awake()
     {
-        if (!TryGetComponent(out _canvasGroup))
+        base.Awake();
+        if (_canvasGroup==null&&!TryGetComponent(out _canvasGroup))
         {
             _canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
@@ -51,11 +52,21 @@ internal class InventoryUI : Singleton<InventoryUI>
 
     private void FixedUpdate()
     {
-        NavigateItems();
-        DisplayItem();
-        UseOrEquipItem();
-        DropItem();
-        UpdateCircularView();
+      
+    }
+
+    private void Update()
+    {
+        if(isInventoryOpen)
+        {
+            NavigateItems();
+            DisplayItem();
+            UseOrEquipItem();
+            DropItem();
+            UpdateCircularView();
+        }
+
+
         if (Input.GetKeyDown(KeyCode.I))
         {
             ToggleInventory();
@@ -82,7 +93,7 @@ internal class InventoryUI : Singleton<InventoryUI>
     private void OpenInventory()
     {
         // Usando DOTween para fazer o inventário aparecer (por exemplo, fadeIn). Ajuste conforme necessário.
-        _canvasGroup.DOFade(1, 1.5f).OnComplete(() =>
+        _canvasGroup.DOFade(1, 0.5f).OnComplete(() =>
         {
             //inventoryUI.SetActive(true);
             GameManager.Instance.Pause();

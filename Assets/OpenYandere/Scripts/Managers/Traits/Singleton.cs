@@ -4,9 +4,16 @@ namespace OpenYandere.Managers.Traits
 {
     internal class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        private static T _instance;
+        private static T _instance; 
         private static readonly object Lock = new object();
 
+        protected void Awake()
+        {
+            if (Instance!= this)
+            {
+                Debug.LogWarning(typeof(T).Name+" is duplicated! Please Remove!");
+            }
+        }
         public static T Instance
         {
             get

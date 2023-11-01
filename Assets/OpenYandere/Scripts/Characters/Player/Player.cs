@@ -33,6 +33,7 @@ namespace OpenYandere.Characters.Player
                 if (EM.GetWeapon() == null && InventorySystem.Instance.GetItems().Count > 0)
                 {
                     EM.Equip(InventorySystem.Instance.GetItems()[0]);
+                    Debug.Log(InventorySystem.Instance.GetItems());
                 }
                 else
                 {
