@@ -149,7 +149,8 @@ namespace OpenYandere.UI.TalkCanvas
 		
         public void OnGossipButtonClicked()
         {
-			// TODO
+            // TODO
+            GossipUI.Instance.ActivateUI();
         }
 		
         public void OnPerformTaskButtonClicked()

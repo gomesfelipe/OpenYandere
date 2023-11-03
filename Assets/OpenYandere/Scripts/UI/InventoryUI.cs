@@ -17,7 +17,7 @@ internal class InventoryUI : Singleton<InventoryUI>
     [SerializeField] protected Button btnUse, btnDrop;
     // Supondo que você tenha um GameObject para o inventário UI.
     public GameObject inventoryUI;
-    public CanvasGroup _canvasGroup;
+    private CanvasGroup _canvasGroup;
     private bool isInventoryOpen = false;
 
     protected void Awake()

@@ -31,8 +31,8 @@ To build OpenYandere you'll need Unity 2018.1.0b2 and NET 4.6 framework.
          - [ ] Distract
          - [ ] Leave
        - [ ] Bye
-   - [ ] Attack
-     - [ ] Become a ragdoll.
+   - [X] Attack
+     - [X] Become a ragdoll.
      - [ ] Produce blood pools.
    - [ ] Drag
    - [ ] Follow a routine.
