@@ -15,14 +15,15 @@ internal class GossipUI : Singleton<GossipUI>
 
     //insert a event listener here
     private StudentDataManager SDM;
+    private StudentGossipDataBase SGD;
     private bool isGossipOpen = false;
     private Character _currentCharacter;
     private int _currentIndex;
     void Start()
     {
         this.TryGetComponent<CanvasGroup>(out _canvasGroup);
-        SDM = StudentDataManager.Instance;
-        _currentCharacter = SDM.getinfo(0);
+        SGD = StudentDataManager.Instance.SGD;
+        _currentCharacter = SGD.getinfo(0);
 
     }
 
@@ -42,7 +43,7 @@ internal class GossipUI : Singleton<GossipUI>
     }
     private void NavigateItems()
     {
-        int itemCount = SDM.getItems().Count;
+        int itemCount = SGD.getItems().Count;
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -64,11 +65,11 @@ internal class GossipUI : Singleton<GossipUI>
 
     private void displayMugShot(Character c)
     {
-        StudentNameText.text = SDM.getinfo(c).club + _currentIndex ;
+        StudentNameText.text = SGD.getinfo(c).club + _currentIndex ;
     }
     private void displaySecerts(Character c)
     {
-        StudentSecret.text = SDM.getinfo(c).secert;
+        StudentSecret.text = SGD.getinfo(c).secert;
     }
 
     public void ActivateUI()
@@ -85,5 +86,6 @@ internal class GossipUI : Singleton<GossipUI>
         _canvasGroup.blocksRaycasts = false;
         //  GameManager.Instance.Resume();
         isGossipOpen = false;
+       // CameraManager.Instance.unlockCamera();
     }
 }

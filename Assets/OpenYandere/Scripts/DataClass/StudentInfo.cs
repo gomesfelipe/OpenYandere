@@ -4,13 +4,12 @@ using UnityEngine;
 
 namespace OpenYandere.DataClass
 {
-
-    public class StudentInfo
+    [CreateAssetMenu(fileName = "GossipData", menuName = "Student/GossipData")]
+    public class StudentGossipInfo:ScriptableObject
     {
-        public StudentInfo(int h = 123, string c = "dramma", string s = "???") { this.height = h; this.club = c; this.secert = s; }
-        public int height { get; private set; }
-        public string club { get; private set; }
-
-        public string secert { get; private set; }
+        // public StudentGossipInfo(int h = 123, string c = "dramma", string s = "???") { this.height = h; this.club = c; this.secert = s; }
+        public int height;
+        public string club;
+        public string secert;
     }
 }

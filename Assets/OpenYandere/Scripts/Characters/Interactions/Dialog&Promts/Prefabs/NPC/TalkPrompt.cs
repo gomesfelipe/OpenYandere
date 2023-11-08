@@ -28,7 +28,7 @@ namespace OpenYandere.Characters.Interactions.Prefabs.NPC
 
                 DialogueBox dialogueBox = GameManager.Instance.UIManager.DialogueBox;
                 CursorManager.Instance.unlockCursor();
-
+                CameraManager.Instance.lockCamera();
 
                 // Initialise the dialogue box.
                 dialogueBox.Initialise(_npc);

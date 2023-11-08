@@ -19,12 +19,17 @@ namespace OpenYandere.Characters.NPC
         public bool isPlayerDetected = false, isInDanger = false;
         public float fieldOfViewAngle = 120.0f;
         public LayerMask viewMask;
+
+        [Header("Activity/Task")]
         public Routine dailyRoutine;
+        public Routine RequestOrEmergenRoutine;
+
         private int currentActivityIndex = 0;
 
         private void Awake()
         {
             _npcMovement=GetComponent<NPCMovement>();
+            RequestOrEmergenRoutine = new Routine();
 
         }
         protected void Start()
@@ -38,7 +43,7 @@ namespace OpenYandere.Characters.NPC
         void FixedUpdate()
         {
             DetectPlayer();
-
+            CheckRequest();
             if (isInDanger)
             {
                 _npcMovement.FleeFromPlayer();
@@ -47,8 +52,26 @@ namespace OpenYandere.Characters.NPC
         }
 
 
-        private void CheckActivity()
+        private void CheckRequest()
         {
+            if (RequestOrEmergenRoutine.activities.Count <= 0) { return; }
+            ActivityBase currentRequest = RequestOrEmergenRoutine.activities[0];
+
+            if (!currentRequest.started) currentRequest.OnActivityStart(this);
+            currentRequest.DoActivity(this);
+
+            if(currentRequest.finished)
+            {
+                currentRequest.OnActivityEnd(this);
+                RequestOrEmergenRoutine.activities.Remove(currentRequest);
+            }
+        }
+        public void addRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
+
+        private void CheckActivity()
+        {   
+            if (RequestOrEmergenRoutine.activities.Count >= 0) { return; }// only do daily routine when no request or emergency
+
             if ((currentActivityIndex >= dailyRoutine.activities.Count) || dailyRoutine.activities.Count == 0) return;
 
             ActivityBase currentActivity = dailyRoutine.activities[currentActivityIndex];
@@ -79,7 +102,7 @@ namespace OpenYandere.Characters.NPC
             
         }
 
-        void DetectPlayer()
+        private void DetectPlayer()
         {
             Vector3 directionToPlayer = player.transform.position - this.transform.position;
             float distanceToPlayer = directionToPlayer.magnitude;
