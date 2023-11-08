@@ -5,13 +5,14 @@ using System.Collections.Generic;
 using Unity.Services.Analytics.Internal;
 using UnityEngine;
 using UnityEngine.AI;
-
+using OpenYandere.Characters.SharedTrackers;
 namespace OpenYandere.Characters.NPC
 {
 
 	[RequireComponent(typeof(NPCMovement))]
 	public abstract class NPC : Character
 	{
+
         public NPCMovement NPCMovement => _npcMovement;
         [SerializeField] protected NPCMovement _npcMovement;
         public GameObject player;
@@ -24,11 +25,18 @@ namespace OpenYandere.Characters.NPC
         public Routine dailyRoutine;
         public Routine RequestOrEmergenRoutine;
 
+        [Header("Trackers (they auto add while playing)")]
+        public List<Tracker> ListOfTracker;
+
         private int currentActivityIndex = 0;
+
 
         private void Awake()
         {
             _npcMovement=GetComponent<NPCMovement>();
+
+            ListOfTracker= new List<Tracker>( GetComponents<Tracker>() );
+
             RequestOrEmergenRoutine = new Routine();
 
         }
@@ -51,7 +59,25 @@ namespace OpenYandere.Characters.NPC
             }
         }
 
+        public Tracker getTracker<T>() 
+        {
+            foreach (Tracker track in ListOfTracker)
+            {
+                if (track is T)
+                {
+                    return track;
+                }
+            }
 
+            return null;
+        }
+
+        public bool addTracker(Tracker t)
+        {
+            ListOfTracker.Add(t);
+            return true;
+        }
+        public void addRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
         private void CheckRequest()
         {
             if (RequestOrEmergenRoutine.activities.Count <= 0) { return; }
@@ -66,7 +92,7 @@ namespace OpenYandere.Characters.NPC
                 RequestOrEmergenRoutine.activities.Remove(currentRequest);
             }
         }
-        public void addRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
+       
 
         private void CheckActivity()
         {   
