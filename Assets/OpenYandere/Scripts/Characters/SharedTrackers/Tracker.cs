@@ -4,19 +4,30 @@ using UnityEngine;
 
 namespace OpenYandere.Characters.SharedTrackers
 {
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(Character))]
     public class Tracker : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] public bool TrackerActive;
+        protected Character owner;
+        protected bool init;
+        void Awake()
         {
-
+            init = false;
         }
 
         // Update is called once per frame
-        void Update()
+        protected void Update()
         {
-
+            if (!init) Debug.LogWarning("Tracker not init!!");
         }
+
+        public void Initialize(Character c)
+        {
+            init = true;
+            owner = c;
+        }
+
+        public void ShowDebugInfo() { }
     }
 }

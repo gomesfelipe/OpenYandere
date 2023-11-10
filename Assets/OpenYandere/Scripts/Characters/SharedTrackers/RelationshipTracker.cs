@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using OpenYandere.Characters.SharedTrackers;
 using OpenYandere.Characters;
+using OpenYandere.Characters.NPC.Prefabs;
 
 namespace OpenYandere.Characters.SharedTrackers
 {
@@ -12,19 +13,22 @@ namespace OpenYandere.Characters.SharedTrackers
         {
             public int known;
             public int preference;
+            
 
             public relation(int k = 0, int p = 50)
             {
                 known = k;
                 preference = p;
             }
-
+            public string getAllRelation() { return "known: " + known + " preference: " + preference; }
         }
         Dictionary<Character, relation> peopleWhomIKnow;
 
         private void Start()
         {
             peopleWhomIKnow = new Dictionary<Character, relation>();
+
+            //peopleWhomIKnow.Add(new Student(), new relation(55, 60));
         }
 
         private void Update()
@@ -44,8 +48,10 @@ namespace OpenYandere.Characters.SharedTrackers
             }
             else
             {
+                
                 return new relation();// reuturns a default value
             }
         }
+        public Dictionary<Character, relation> getAllRelation() { return peopleWhomIKnow; }
     }
 }

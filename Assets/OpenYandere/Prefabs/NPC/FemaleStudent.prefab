@@ -4326,6 +4326,7 @@ GameObject:
   - component: {fileID: 2112371386800120999}
   - component: {fileID: 7703336983660470413}
   - component: {fileID: 4118918079489169681}
+  - component: {fileID: 7792850226330137176}
   - component: {fileID: 3104591925296491483}
   - component: {fileID: 2772643949667053492}
   - component: {fileID: 3364738493290823807}
@@ -4443,6 +4444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a72b74566f04235b6f35273f4f72038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   Id: 1
   characterName: Female Student
   maxHealth: 100
@@ -4454,8 +4456,9 @@ MonoBehaviour:
   Gender: 1
   headIKTarget: {fileID: 6218091457828786723}
   ragdollEnabler: {fileID: 2112371386800120999}
+  ListOfTracker: []
+  ListOfSenses: []
   _npcMovement: {fileID: 0}
-  player: {fileID: 0}
   detectionDistance: 10
   dangerDistance: 5
   isPlayerDetected: 0
@@ -4468,7 +4471,7 @@ MonoBehaviour:
     activities: []
   RequestOrEmergenRoutine:
     activities: []
-  ListOfTracker: []
+  people: []
   personality: {fileID: 11400000, guid: 3ee4cee9e1f661943b58632410e26376, type: 2}
 --- !u!114 &2112371386800120999
 MonoBehaviour:
@@ -4498,6 +4501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e9f3d44100d1d45b3511ceb48688db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrackerActive: 0
 --- !u!114 &4118918079489169681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4510,6 +4514,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2fbe3cf97d69f545a475797263c747d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrackerActive: 0
+--- !u!114 &7792850226330137176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684547308732712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7861ba6b4500a8043a97f7354fe05e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensesActive: 1
+  senseType: 0
+  radius: 120
+  MaxSenseRange: 120
+  MinSenseRange: 110
+  currentSenseRange: 100
+  rayCount: 1
+  viewMask:
+    serializedVersion: 2
+    m_Bits: 64
+  _alert: 0
+  thingsIsee: []
 --- !u!114 &3104591925296491483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7300,7 +7329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_Root: {fileID: 4949195186007496}
     m_Mid: {fileID: 4900528387915896}
@@ -7420,7 +7449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeda7bfbf984f2a4da5ab4b8967b115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Weight: 1
+  m_Weight: 0
   m_Data:
     m_Root: {fileID: 4298546865790548}
     m_Mid: {fileID: 4847096210898648}

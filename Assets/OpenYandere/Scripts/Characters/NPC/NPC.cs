@@ -6,6 +6,9 @@ using Unity.Services.Analytics.Internal;
 using UnityEngine;
 using UnityEngine.AI;
 using OpenYandere.Characters.SharedTrackers;
+using OpenYandere.Characters.Sense;
+using System;
+
 namespace OpenYandere.Characters.NPC
 {
 
@@ -15,27 +18,27 @@ namespace OpenYandere.Characters.NPC
 
         public NPCMovement NPCMovement => _npcMovement;
         [SerializeField] protected NPCMovement _npcMovement;
-        public GameObject player;
+        
         public float detectionDistance = 10.0f, dangerDistance = 5.0f;
         public bool isPlayerDetected = false, isInDanger = false;
-        public float fieldOfViewAngle = 120.0f;
+        public float fieldOfViewAngle = 120.0f; 
         public LayerMask viewMask;
 
         [Header("Activity/Task")]
         public Routine dailyRoutine;
         public Routine RequestOrEmergenRoutine;
 
-        [Header("Trackers (they auto add while playing)")]
-        public List<Tracker> ListOfTracker;
+        public List<Character> people;
 
         private int currentActivityIndex = 0;
 
 
         private void Awake()
         {
+            base.Awake();
             _npcMovement=GetComponent<NPCMovement>();
 
-            ListOfTracker= new List<Tracker>( GetComponents<Tracker>() );
+            
 
             RequestOrEmergenRoutine = new Routine();
 
@@ -59,24 +62,9 @@ namespace OpenYandere.Characters.NPC
             }
         }
 
-        public Tracker getTracker<T>() 
-        {
-            foreach (Tracker track in ListOfTracker)
-            {
-                if (track is T)
-                {
-                    return track;
-                }
-            }
+       
 
-            return null;
-        }
-
-        public bool addTracker(Tracker t)
-        {
-            ListOfTracker.Add(t);
-            return true;
-        }
+        
         public void addRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
         private void CheckRequest()
         {
@@ -130,6 +118,12 @@ namespace OpenYandere.Characters.NPC
 
         private void DetectPlayer()
         {
+            ViewSenses vs =(ViewSenses) getSenses<ViewSenses>();
+            if (vs!=null)
+            {
+                people=vs.Isaw();
+            }
+            /*
             Vector3 directionToPlayer = player.transform.position - this.transform.position;
             float distanceToPlayer = directionToPlayer.magnitude;
             float angleBetweenNPCAndPlayer = Vector3.Angle(transform.forward, directionToPlayer);
@@ -154,7 +148,7 @@ namespace OpenYandere.Characters.NPC
             {
                 isPlayerDetected = false;
                 isInDanger = false;
-            }
+            } */
         }
 
         IEnumerator LookAtWeaponAndReact()
