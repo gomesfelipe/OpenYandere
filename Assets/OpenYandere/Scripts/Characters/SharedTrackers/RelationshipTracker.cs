@@ -13,20 +13,27 @@ namespace OpenYandere.Characters.SharedTrackers
         {
             public int known;
             public int preference;
-            
+          
 
             public relation(int k = 0, int p = 50)
             {
                 known = k;
                 preference = p;
             }
+            public static relation operator +(relation a, relation b)
+            {
+                int k = a.known + b.known;
+                int p = a.preference + b.preference;
+                return new relation(k,p);
+            }
             public string getAllRelation() { return "known: " + known + " preference: " + preference; }
         }
-        Dictionary<Character, relation> peopleWhomIKnow;
+
+        private relationshipData peopleWhomIKnow;
 
         private void Start()
         {
-            peopleWhomIKnow = new Dictionary<Character, relation>();
+            peopleWhomIKnow = new relationshipData( new Dictionary<Character, relation>());
 
             //peopleWhomIKnow.Add(new Student(), new relation(55, 60));
         }
@@ -37,12 +44,12 @@ namespace OpenYandere.Characters.SharedTrackers
         }
         public void addRelation(Character c, int k, int p)
         {
-            peopleWhomIKnow.Add(c, new relation(k, p));
+            peopleWhomIKnow.data.Add(c, new relation(k, p));
         }
         public relation getRelation(Character c)
         {
             relation r;
-            if (peopleWhomIKnow.TryGetValue(c, out r))
+            if (peopleWhomIKnow.data.TryGetValue(c, out r))
             {
                 return r;
             }
@@ -52,6 +59,19 @@ namespace OpenYandere.Characters.SharedTrackers
                 return new relation();// reuturns a default value
             }
         }
-        public Dictionary<Character, relation> getAllRelation() { return peopleWhomIKnow; }
+        public void updateRelationship(relationshipData data)
+        {
+            foreach (KeyValuePair<Character,relation> e in data.data)
+            {
+                peopleWhomIKnow.data[e.Key] += e.Value; //combine value
+            }
+        }
+        public Dictionary<Character, relation> getAllRelation() { return peopleWhomIKnow.data; }
+
+        public class relationshipData
+        {
+            public Dictionary<Character, relation> data;
+            public relationshipData(Dictionary<Character, relation> d) { data = d; }
+        }
     }
 }

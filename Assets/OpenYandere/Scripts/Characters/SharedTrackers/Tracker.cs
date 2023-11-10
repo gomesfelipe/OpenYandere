@@ -11,21 +11,15 @@ namespace OpenYandere.Characters.SharedTrackers
         [SerializeField] public bool TrackerActive;
         protected Character owner;
         protected bool init;
-        void Awake()
+        protected void Awake()
         {
-            init = false;
+            owner = GetComponent<Character>();
         }
 
         // Update is called once per frame
         protected void Update()
         {
-            if (!init) Debug.LogWarning("Tracker not init!!");
-        }
-
-        public void Initialize(Character c)
-        {
-            init = true;
-            owner = c;
+           
         }
 
         public void ShowDebugInfo() { }

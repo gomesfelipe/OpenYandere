@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IMultiPersonActivity 
 {
-    public bool waitForPeopl();
+    public bool waitForPeople();
+    public void giveActivity();
 }

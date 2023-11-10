@@ -19,22 +19,19 @@ public class EmotionTracker : Tracker
    
     void Awake()
     {
-        
+        base.Awake();
 
         var allemotion = Enum.GetValues(typeof(emotion));
         emotions =new Dictionary<emotion,int> ();
         foreach (emotion e in allemotion )
         {
-            emotions.Add(e, 1);
-            
+            emotions.Add(e, 1);         
         }
     }
 
     private void Update()
     {
         base.Update();
-
-
     }
 
     

@@ -4323,6 +4323,7 @@ GameObject:
   - component: {fileID: 114907446818676566}
   - component: {fileID: 114115367723487704}
   - component: {fileID: 114476926328503522}
+  - component: {fileID: 1056087469088866184}
   - component: {fileID: 2112371386800120999}
   - component: {fileID: 7703336983660470413}
   - component: {fileID: 4118918079489169681}
@@ -4456,8 +4457,7 @@ MonoBehaviour:
   Gender: 1
   headIKTarget: {fileID: 6218091457828786723}
   ragdollEnabler: {fileID: 2112371386800120999}
-  ListOfTracker: []
-  ListOfSenses: []
+  mind: {fileID: 0}
   _npcMovement: {fileID: 0}
   detectionDistance: 10
   dangerDistance: 5
@@ -4473,6 +4473,21 @@ MonoBehaviour:
     activities: []
   people: []
   personality: {fileID: 11400000, guid: 3ee4cee9e1f661943b58632410e26376, type: 2}
+--- !u!114 &1056087469088866184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684547308732712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55eb09415efaf464599377bd6bdd75bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allTracker: []
+  allSenses: []
+  owner: {fileID: 0}
 --- !u!114 &2112371386800120999
 MonoBehaviour:
   m_ObjectHideFlags: 0

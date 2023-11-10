@@ -11,27 +11,18 @@ namespace OpenYandere.Characters.Sense
     {
         [SerializeField]  public bool sensesActive;
         protected Character owner;
-        protected bool init;
-        void Start()
+       
+        void Awake()
         {
-
+            owner = GetComponent<Character>();
         }
 
         // Update is called once per frame
         protected void Update()
         {
-            if (!init)
-            {
-                Debug.LogWarning("Tracker not init!!");
-                return;
-            }
+           
         }
-
-        public void Initialize(Character c)
-        {
-            init = true;
-            owner = c;
-        }
+        
         public void ShowDebugInfo() { }
     }
 }

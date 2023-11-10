@@ -118,7 +118,7 @@ namespace OpenYandere.Characters.NPC
 
         private void DetectPlayer()
         {
-            ViewSenses vs =(ViewSenses) getSenses<ViewSenses>();
+            ViewSenses vs =(ViewSenses) mind.getSenses<ViewSenses>();
             if (vs!=null)
             {
                 people=vs.Isaw();
