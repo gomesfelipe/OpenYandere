@@ -64,10 +64,7 @@ namespace OpenYandere.Characters.SharedMind
         public void applyReaction(Reaction r)
         {
             EmotionTracker emo= allTracker.OfType<EmotionTracker>().FirstOrDefault();
-            foreach (KeyValuePair<EmotionTracker.emotion,int> e in r.emotionReaction)
-            {
-                emo.updateEmotion(e.Key, e.Value);
-            }//TODO tmr
+            emo.updateEmotion(r.emotionReaction);
 
             RelationshipTracker tracker = allTracker.OfType<RelationshipTracker>().FirstOrDefault();
             tracker.updateRelationship(r.relationReaction);
@@ -76,9 +73,10 @@ namespace OpenYandere.Characters.SharedMind
 
         public class Reaction
         {
-            public Dictionary<EmotionTracker.emotion, int> emotionReaction;
+            public EmotionTracker.emotionData emotionReaction;
             public RelationshipTracker.relationshipData relationReaction;
-            public Reaction(Dictionary<EmotionTracker.emotion, int> er,
+
+            public Reaction(EmotionTracker.emotionData er,
                 RelationshipTracker.relationshipData rr)
             {
                 this.emotionReaction = er;

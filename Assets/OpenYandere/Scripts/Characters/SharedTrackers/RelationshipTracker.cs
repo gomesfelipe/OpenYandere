@@ -4,6 +4,7 @@ using UnityEngine;
 using OpenYandere.Characters.SharedTrackers;
 using OpenYandere.Characters;
 using OpenYandere.Characters.NPC.Prefabs;
+using System;
 
 namespace OpenYandere.Characters.SharedTrackers
 {
@@ -11,22 +12,33 @@ namespace OpenYandere.Characters.SharedTrackers
     {
         public struct relation
         {
-            public int known;
-            public int preference;
+          //  public int known;
+          //  public int preference;
           
-
-            public relation(int k = 0, int p = 50)
+            public enum relationKey
             {
-                known = k;
-                preference = p;
+                known,
+                preference,
+            }
+            public Dictionary<relationKey, int> value;
+            public int max;
+            public int min;
+            public relation(Dictionary<relationKey, int> v, int ma = 0, int mi = 0)
+            {
+                value = v;
+                max = ma;
+                min = mi;
             }
             public static relation operator +(relation a, relation b)
             {
-                int k = a.known + b.known;
-                int p = a.preference + b.preference;
-                return new relation(k,p);
+                foreach (KeyValuePair<relationKey, int> k in b.value)
+                {
+                    a.value[k.Key] = Math.Clamp(a.value[k.Key] + k.Value, a.min, a.max);
+                }
+                return new relation(a.value);
             }
-            public string getAllRelation() { return "known: " + known + " preference: " + preference; }
+            public string getAllRelation() { return "known: " + value[relationKey.known] + 
+                    " preference: " + value[relationKey.preference]; }
         }
 
         private relationshipData peopleWhomIKnow;
@@ -42,9 +54,9 @@ namespace OpenYandere.Characters.SharedTrackers
         {
             
         }
-        public void addRelation(Character c, int k, int p)
+        public void addRelation(Character c, relation r)
         {
-            peopleWhomIKnow.data.Add(c, new relation(k, p));
+            peopleWhomIKnow.data.Add(c, r);
         }
         public relation getRelation(Character c)
         {
@@ -54,19 +66,18 @@ namespace OpenYandere.Characters.SharedTrackers
                 return r;
             }
             else
-            {
-                
+            {               
                 return new relation();// reuturns a default value
             }
         }
         public void updateRelationship(relationshipData data)
         {
-            foreach (KeyValuePair<Character,relation> e in data.data)
+            foreach (KeyValuePair<Character, relation> c in data.data)
             {
-                peopleWhomIKnow.data[e.Key] += e.Value; //combine value
-            }
+                peopleWhomIKnow.data[c.Key] += data.data[c.Key];
+            }        
         }
-        public Dictionary<Character, relation> getAllRelation() { return peopleWhomIKnow.data; }
+        public relationshipData getAllRelation() { return peopleWhomIKnow; }
 
         public class relationshipData
         {

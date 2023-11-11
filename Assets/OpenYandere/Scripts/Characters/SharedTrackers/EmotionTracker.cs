@@ -6,27 +6,67 @@ using System;
 using OpenYandere.Characters;
 public class EmotionTracker : Tracker
 {
-    public enum emotion
+    public struct emotionData
     {
-        joy,
-        sadness,
-        irritation,
-        fear,
-        sanitiy
+        public enum emotionKey
+        {
+            joy,
+            sadness,
+            irritation,
+            fear,
+            sanitiy,
+        }
+        public Dictionary<emotionKey,int> value;
+        public int max;
+        public int min;
+  
+        public emotionData(Dictionary<emotionKey,int> v,int ma=0, int mi=0)
+        {
+            value = v;
+            max = ma;
+            min = mi;
+        }
+        public static emotionData operator +(emotionData a, emotionData b)
+        {
+          foreach(KeyValuePair<emotionKey,int> k in b.value)
+            {
+                a.value[k.Key] = Math.Clamp(a.value[k.Key] + k.Value, a.min, a.max);
+            }
+            return new emotionData(a.value);
+        }
+
+        public static emotionData operator *(emotionData a, emotionData b)
+        {
+            foreach (KeyValuePair<emotionKey, int> k in b.value)
+            {
+                a.value[k.Key]= Math.Clamp( a.value[k.Key] * k.Value,a.min,a.max);
+            }
+            return new emotionData(a.value);
+        }
+
+        public static emotionData operator /(emotionData a, emotionData b)
+        {
+            foreach (KeyValuePair<emotionKey, int> k in b.value)
+            {
+                a.value[k.Key] = Math.Clamp(a.value[k.Key] / k.Value, a.min, a.max);
+            }
+            return new emotionData(a.value);
+        }
     }
     
-    public Dictionary<emotion, int> emotions { get; private set; }
+    public emotionData data { get; private set; }
    
     void Awake()
     {
         base.Awake();
 
-        var allemotion = Enum.GetValues(typeof(emotion));
-        emotions =new Dictionary<emotion,int> ();
-        foreach (emotion e in allemotion )
-        {
-            emotions.Add(e, 1);         
-        }
+        var allemotion = Enum.GetValues(typeof(emotionData));
+        data =new emotionData(new Dictionary<emotionData.emotionKey, int> {
+            //some default value
+            {emotionData.emotionKey.joy,10 },
+            
+        });
+      
     }
 
     private void Update()
@@ -35,11 +75,17 @@ public class EmotionTracker : Tracker
     }
 
     
-    public void updateEmotion(emotion e, int i)
+    public void updateEmotion(emotionData.emotionKey e, int i)
     {
-        emotions[e] = i;
+        data.value[e] += i;
+    }
+    public void updateEmotion(emotionData ed)
+    {
+        data += ed;
     }
 
-    public int getEmotion(emotion e) { return emotions[e]; }
-    public Dictionary<emotion,int> getAllEmotions() { return emotions; }
+    public int getEmotion(emotionData.emotionKey e) { return data.value[e]; }
+    public emotionData getAllEmotions() { return data; }
+
+ 
 }

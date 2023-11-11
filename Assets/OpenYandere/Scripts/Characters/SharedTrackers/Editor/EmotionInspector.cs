@@ -16,13 +16,13 @@ public class EmotionInspector : Editor
         if (component.getAllEmotions() == null) return;
 
 
-        var allemotion = Enum.GetValues(typeof(EmotionTracker.emotion));
+        var allemotion = Enum.GetValues(typeof(EmotionTracker.emotionData));
 
         float yheight=0;
 
        
 
-        foreach (EmotionTracker.emotion e in allemotion)
+        foreach (EmotionTracker.emotionData e in allemotion)
         {
             yheight += 5;
             // EditorGUILayout.IntField( e.ToString(), component.getEmotion(e));
