@@ -10,7 +10,7 @@ namespace OpenYandere.Characters.NPC
     [System.Serializable]
     public class TrackingTargetActivity : ActivityBase
     {
-        public Transform Tracktarget;
+        public GameObject Tracktarget;
         public int TrackInterval=3;
         public float Distance = 5;
 
@@ -27,10 +27,10 @@ namespace OpenYandere.Characters.NPC
             if (timer>TrackInterval)
             {
                 Debug.Log("tracking...");
-                float dist = Vector3.Distance(Tracktarget.position, _ActualTarget);
+                float dist = Vector3.Distance(Tracktarget.transform.position, _ActualTarget);
                if ( dist > Distance)
                {
-                    Vector3 circOuterSide = ( Tracktarget.position + Vector3.Normalize( _ActualTarget-Tracktarget.position )*2 );
+                    Vector3 circOuterSide = ( Tracktarget.transform.position + Vector3.Normalize( _ActualTarget-Tracktarget.transform.position )*2 );
                     _ActualTarget = circOuterSide;
 
                     person.NPCMovement.NavigationAgent.SetDestination(_ActualTarget);
@@ -52,7 +52,7 @@ namespace OpenYandere.Characters.NPC
         {
             Debug.Log("START");
             _ActualTarget = person.gameObject.transform.position;
-            Tracktarget = person.player.transform;
+            Tracktarget = person.player;
            // person.NPCMovement.NavigationAgent.SetDestination(Tracktarget.position);
             started = true;
         }

@@ -9,7 +9,7 @@ namespace OpenYandere.Characters.NPC
         public int endTimeMilitary;
 
         public int activityPriority;
-
+        public NPC owner;
         //Events
 
         public delegate void EndActivity(NPC n);
@@ -18,6 +18,13 @@ namespace OpenYandere.Characters.NPC
         public bool finished { get; set; }
         public bool started { get; set; }
         public EndActivity getEndActivityDelegate(){ return endActivity; }
+
+        public void Reset()
+        {
+            started = false;
+            finished = false;
+        }
+        //public abastract void GetActivityAnimation();
         public abstract void OnActivityStart(NPC person);
 
         public abstract void DoActivity(NPC person);

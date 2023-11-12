@@ -19,7 +19,7 @@ namespace OpenYandere.Characters.Sense
             filerMode = f;
         }
 
-
+        
        public bool isTarget() { return true; }
     }
 }

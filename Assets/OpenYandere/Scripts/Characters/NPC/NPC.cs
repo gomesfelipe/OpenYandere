@@ -37,10 +37,10 @@ namespace OpenYandere.Characters.NPC
         {
             base.Awake();
             _npcMovement=GetComponent<NPCMovement>();
-
+            
             
 
-            RequestOrEmergenRoutine = new Routine();
+           // RequestOrEmergenRoutine = new Routine();
 
         }
         protected void Start()
@@ -50,9 +50,14 @@ namespace OpenYandere.Characters.NPC
             {
                 dailyRoutine.activities[0].OnActivityStart(this);
             }
+            if (RequestOrEmergenRoutine.activities.Count > 0)
+            {
+                RequestOrEmergenRoutine.activities[0].Reset();
+            }
         }
         void FixedUpdate()
         {
+            
             DetectPlayer();
             CheckRequest();
             if (isInDanger)
@@ -68,9 +73,10 @@ namespace OpenYandere.Characters.NPC
         public void addRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
         private void CheckRequest()
         {
-            if (RequestOrEmergenRoutine.activities.Count <= 0) { return; }
+           // Debug.Log("request");
+            if (RequestOrEmergenRoutine.activities.Count == 0) { return; }
             ActivityBase currentRequest = RequestOrEmergenRoutine.activities[0];
-
+          
             if (!currentRequest.started) currentRequest.OnActivityStart(this);
             currentRequest.DoActivity(this);
 
@@ -82,9 +88,9 @@ namespace OpenYandere.Characters.NPC
         }
        
 
-        private void CheckActivity()
+        private void CheckActivity()// this only update by the clock delegate...
         {   
-            if (RequestOrEmergenRoutine.activities.Count >= 0) { return; }// only do daily routine when no request or emergency
+            if (RequestOrEmergenRoutine.activities.Count > 0) { return; }// only do daily routine when no request or emergency
 
             if ((currentActivityIndex >= dailyRoutine.activities.Count) || dailyRoutine.activities.Count == 0) return;
 

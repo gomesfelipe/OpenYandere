@@ -11,6 +11,7 @@ namespace OpenYandere.Characters.SharedTrackers
         [SerializeField] public bool TrackerActive;
         protected Character owner;
         protected bool init;
+       
         protected void Awake()
         {
             owner = GetComponent<Character>();

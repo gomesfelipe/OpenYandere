@@ -67,7 +67,7 @@ namespace OpenYandere.Characters.SharedMind
             emo.updateEmotion(r.emotionReaction);
 
             RelationshipTracker tracker = allTracker.OfType<RelationshipTracker>().FirstOrDefault();
-            tracker.updateRelationship(r.relationReaction);
+            if(tracker!=null)tracker.updateRelationship(r.relationReaction);
         }
 
 
@@ -76,8 +76,9 @@ namespace OpenYandere.Characters.SharedMind
             public EmotionTracker.emotionData emotionReaction;
             public RelationshipTracker.relationshipData relationReaction;
 
-            public Reaction(EmotionTracker.emotionData er,
-                RelationshipTracker.relationshipData rr)
+            public Reaction(EmotionTracker.emotionData er=default,
+                RelationshipTracker.relationshipData rr= null
+                    )
             {
                 this.emotionReaction = er;
                 this.relationReaction = rr;

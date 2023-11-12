@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using OpenYandere.Characters.NPC;
+using OpenYandere.Characters;
 
 public class DistractActivity : ActivityBase
 {

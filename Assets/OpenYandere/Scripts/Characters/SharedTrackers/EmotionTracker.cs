@@ -60,11 +60,15 @@ public class EmotionTracker : Tracker
     {
         base.Awake();
 
-        var allemotion = Enum.GetValues(typeof(emotionData));
+       // var allemotion = Enum.GetValues(typeof(emotionData));
         data =new emotionData(new Dictionary<emotionData.emotionKey, int> {
             //some default value
             {emotionData.emotionKey.joy,10 },
-            
+            {emotionData.emotionKey.fear,10 },
+            {emotionData.emotionKey.irritation,10 },
+            {emotionData.emotionKey.sanitiy,10 },
+            {emotionData.emotionKey.sadness,10 },
+
         });
       
     }
@@ -85,7 +89,7 @@ public class EmotionTracker : Tracker
     }
 
     public int getEmotion(emotionData.emotionKey e) { return data.value[e]; }
-    public emotionData getAllEmotions() { return data; }
+  
 
  
 }

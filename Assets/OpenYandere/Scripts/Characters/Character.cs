@@ -21,8 +21,8 @@ namespace OpenYandere.Characters
     {
         public GameObject player;
 
-        protected Animator animator;
-        public int Id;
+        public Animator animator;
+        public PrefabID ID;
         public string characterName;
         public int maxHealth = 100;
         public int health;
@@ -41,14 +41,15 @@ namespace OpenYandere.Characters
        
 
         protected void Awake()
-        {
+        {   
+           
             // Suponhamos que o personagem tenha um Animator.
             animator = GetComponent<Animator>();
             ragdollEnabler = GetComponent<RagdollEnabler>();
             mind = GetComponent<Mind>();
 
             health = maxHealth;
-      
+        
         }
         protected void Start()
         {
