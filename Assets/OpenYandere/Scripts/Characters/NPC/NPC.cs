@@ -8,6 +8,7 @@ using UnityEngine.AI;
 using OpenYandere.Characters.SharedTrackers;
 using OpenYandere.Characters.Sense;
 using System;
+using OpenYandere.Characters.Interactions.InteractableCompoents;
 
 namespace OpenYandere.Characters.NPC
 {
@@ -15,7 +16,10 @@ namespace OpenYandere.Characters.NPC
 	[RequireComponent(typeof(NPCMovement))]
 	public abstract class NPC : Character
 	{
-
+        // i think a State machine is needed to keep logic clean,heres some ideas
+        //1.NPCFreeTimeState <- Ai finds things to do
+        //2.NPCLessonState <-go to class and handle class stuff
+        //3.NPCCustomEventState <- for special events like Fire alarm or school hall meetings
         public NPCMovement NPCMovement => _npcMovement;
         [SerializeField] protected NPCMovement _npcMovement;
         
@@ -60,6 +64,7 @@ namespace OpenYandere.Characters.NPC
             
             DetectPlayer();
             CheckRequest();
+            FindInteractable();
             if (isInDanger)
             {
                 _npcMovement.FleeFromPlayer();
@@ -67,7 +72,22 @@ namespace OpenYandere.Characters.NPC
             }
         }
 
-       
+       private void FindInteractable()
+        {
+            InteratableCompoent targetobject;
+            foreach(KeyValuePair<InteratableCompoent,InteratableCompoent.options> v in RoomManager.Instance.getRoomInteractables())
+            {
+                foreach(KeyValuePair<int,InteratableCompoent.InteractableInfo> info in v.Value.value)
+                {
+                     if(mind.checkIncentives(info.Value.incentives))
+                    {
+                        Debug.Log(characterName + " wants " + info.Value.infoName);
+                    }
+                }
+            }// NoteToMe: current checking system have a couple of issue
+            // 1.It cant really pick highest priorities
+            // 2. it should return a startactivityTicket
+        }
 
         
         public void addRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }

@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace OpenYandere.Characters.SharedTrackers
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Character))]
-    public class Tracker : MonoBehaviour
+    public abstract class Tracker : MonoBehaviour
     {
         [SerializeField] public bool TrackerActive;
         protected Character owner;
@@ -22,7 +23,7 @@ namespace OpenYandere.Characters.SharedTrackers
         {
            
         }
-
+        public abstract bool IsThatAppealingToMe(SharedMind.Mind.Reaction data);
         public void ShowDebugInfo() { }
     }
 }

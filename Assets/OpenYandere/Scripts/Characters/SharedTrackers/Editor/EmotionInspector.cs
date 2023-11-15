@@ -1,7 +1,9 @@
+using OpenYandere.Characters.SharedTrackers;
 using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+
 
 [CanEditMultipleObjects]
 [CustomEditor(typeof(EmotionTracker))]

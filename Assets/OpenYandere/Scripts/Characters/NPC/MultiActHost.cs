@@ -5,7 +5,7 @@ namespace OpenYandere.Characters.NPC
 {
     public abstract class MultiActHost : ActivityBase
     {
-        [Range(0, 10)]
+        [Range(0,10)]
         public int maxCompacity;
         [Range(0,10)]
         public int minCompacity;

@@ -6,6 +6,7 @@ using OpenYandere.Characters;
 using OpenYandere.Characters.NPC.Prefabs;
 using System;
 using System.Linq;
+using OpenYandere.Characters.SharedMind;
 
 namespace OpenYandere.Characters.SharedTrackers
 {
@@ -82,6 +83,10 @@ namespace OpenYandere.Characters.SharedTrackers
         private void Update()
         {
             
+        }
+        public override bool IsThatAppealingToMe(Mind.Reaction data)
+        {
+            return true; //TODO
         }
         public void addRelation(PrefabID c, relation r)
         {

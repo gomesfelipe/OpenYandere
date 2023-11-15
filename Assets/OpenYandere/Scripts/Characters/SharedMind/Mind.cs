@@ -70,6 +70,17 @@ namespace OpenYandere.Characters.SharedMind
             if(tracker!=null)tracker.updateRelationship(r.relationReaction);
         }
 
+        public bool checkIncentives(Reaction r)
+        {
+            foreach(Tracker c in allTracker)
+            {
+              if(  c.IsThatAppealingToMe(r))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         public class Reaction
         {
