@@ -28,8 +28,8 @@ namespace OpenYandere.Characters.Player
 
         private void Awake()
         {
-            _characterController = GetComponent<CharacterController>();
-            _characterAnimator = GetComponent<CharacterAnimator>();
+            _characterController ??= GetComponent<CharacterController>();
+            _characterAnimator ??= GetComponent<CharacterAnimator>();
            
         }
         

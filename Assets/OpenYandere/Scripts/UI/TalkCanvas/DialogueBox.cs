@@ -99,7 +99,7 @@ namespace OpenYandere.UI.TalkCanvas
                      TrackingTargetActivity t = ScriptableObject.CreateInstance<TrackingTargetActivity>();
                     //TrackingTargetActivity t = new TrackingTargetActivity();
                    // t.Tracktarget = _interactingWithNPC.player.transform;
-                    _interactingWithNPC.addRequest(t);
+                    _interactingWithNPC.AddRequest(t);
                     //t.Tracktarget = _interactingWithNPC.player.gameObject.transform;
                     t.TrackInterval = 60;
                     t.Distance = 2;

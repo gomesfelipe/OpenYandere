@@ -7,20 +7,20 @@ using UnityEngine.Events;
 namespace OpenYandere.Characters.Interactions.InteractableCompoents
 {
     [RequireComponent(typeof(Animator))]
-    public abstract class InteratableCompoent : MonoBehaviour
+    public abstract class InteractableComponent : MonoBehaviour
     {
-        public options InteratableList;
+        public Options InteratableList;
 
-        public UnityEvent<Dictionary<InteratableCompoent, options>> updateList;
+        public UnityEvent<Dictionary<InteractableComponent, Options>> updateList;
 
         protected void Awake()
         {
-            updateList.AddListener(updateRoomOptionList);
-            InteratableList = new options(new Dictionary<int, InteractableInfo>());
+            updateList.AddListener(UpdateRoomOptionList);
+            InteratableList = new Options(new Dictionary<int, InteractableInfo>());
         }
 
       
-        public void updateRoomOptionList(Dictionary<InteratableCompoent, options> list)
+        public void UpdateRoomOptionList(Dictionary<InteractableComponent, Options> list)
         {
             if (list.ContainsKey(this))
             {
@@ -29,35 +29,35 @@ namespace OpenYandere.Characters.Interactions.InteractableCompoents
             {
                 list.Add(this, InteratableList);
             }
-            Debug.Log("Updated");
+            //Debug.Log("Updated");
         }
 
         
         
-        public StartActivityTicket getStartTicket(int activityIndex, Character thePerson)
+        public StartActivityTicket GetStartTicket(int activityIndex, Character thePerson)
         {
-            StartActivityTicket tick = new StartActivityTicket(this.transform.position,activityIndex,thePerson);
-            tick.Arrived.AddListener(userArrived);
-            tick.Canceled.AddListener(userCancel);
+            StartActivityTicket tick = new(this.transform.position,activityIndex,thePerson);
+            tick.Arrived.AddListener(UserArrived);
+            tick.Canceled.AddListener(UserCancel);
             return tick;
         }
         
-        public void userArrived(Character user,int optionindex)
+        public void UserArrived(Character user,int optionindex)
         {
             Debug.Log(user.characterName + " has arrived");
-            InteratableList.value[optionindex].addPeople(user);
+            InteratableList.value[optionindex].AddPeople(user);
         }
 
-        public void userCancel(Character user, int optionindex)
+        public void UserCancel(Character user, int optionindex)
         {
             Debug.Log(user.characterName + " has Cancel!");
-            InteratableList.value[optionindex].removePeople(user);
+            InteratableList.value[optionindex].RemovePeople(user);
         }
 
-        public class options
+        public class Options
         {
             public Dictionary<int, InteractableInfo> value;
-            public options(Dictionary<int, InteractableInfo> v)
+            public Options(Dictionary<int, InteractableInfo> v)
             {
                 this.value = v;
             }
@@ -77,11 +77,11 @@ namespace OpenYandere.Characters.Interactions.InteractableCompoents
 
             }
 
-            public void updateIncentives(Mind.Reaction data)
+            public void UpdateIncentives(Mind.Reaction data)
             {
                 this.incentives = data;
             }
-            public void addPeople(Character person)
+            public void AddPeople(Character person)
             {
               if (!peopleWhoAreUsing.Contains(person))
                 {
@@ -89,7 +89,7 @@ namespace OpenYandere.Characters.Interactions.InteractableCompoents
                 }
             }
 
-            public void removePeople(Character person)
+            public void RemovePeople(Character person)
             {
                 if (peopleWhoAreUsing.Contains(person))
                 {

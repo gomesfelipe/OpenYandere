@@ -6,7 +6,7 @@ using OpenYandere.Characters.SharedTrackers;
 
 namespace OpenYandere.Characters.Interactions.InteractableCompoents
 {
-    public class WaterFountainInteratable : InteratableCompoent
+    public class WaterFountainInteratable : InteractableComponent
     {
         // Start is called before the first frame update
 

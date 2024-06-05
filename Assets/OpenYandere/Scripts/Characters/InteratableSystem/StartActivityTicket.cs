@@ -10,7 +10,7 @@ namespace OpenYandere.Characters.Interactions.InteractableCompoents
     public class StartActivityTicket : MonoBehaviour
     {
         public int optionIndex;
-        public InteratableCompoent Caller;
+        public InteractableComponent Caller;
         public Character requester;
         public Vector3 StartingPosition;
 

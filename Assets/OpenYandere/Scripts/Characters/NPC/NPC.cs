@@ -74,10 +74,10 @@ namespace OpenYandere.Characters.NPC
 
        private void FindInteractable()
         {
-            InteratableCompoent targetobject;
-            foreach(KeyValuePair<InteratableCompoent,InteratableCompoent.options> v in RoomManager.Instance.getRoomInteractables())
+            InteractableComponent targetobject;
+            foreach(KeyValuePair<InteractableComponent,InteractableComponent.Options> v in RoomManager.Instance.getRoomInteractables())
             {
-                foreach(KeyValuePair<int,InteratableCompoent.InteractableInfo> info in v.Value.value)
+                foreach(KeyValuePair<int,InteractableComponent.InteractableInfo> info in v.Value.value)
                 {
                      if(mind.checkIncentives(info.Value.incentives))
                     {
@@ -90,7 +90,7 @@ namespace OpenYandere.Characters.NPC
         }
 
         
-        public void addRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
+        public void AddRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
         private void CheckRequest()
         {
            // Debug.Log("request");

@@ -16,7 +16,7 @@ namespace OpenYandere.Characters.NPC
 
         [Header("References:")]
         [SerializeField] private CharacterAnimator _characterAnimator;
-        [SerializeField] private NavMeshAgent _navMeshAgent;
+        [SerializeField] protected NavMeshAgent _navMeshAgent;
         
         [Header("Settings:")]
         [Tooltip("The walking speed of the NPC.")]
@@ -26,14 +26,14 @@ namespace OpenYandere.Characters.NPC
         [Tooltip("Is the NPC running?")]
         public bool IsRunning;
         
-        private void Awake()
+        protected void Awake()
         {
             _navMeshAgent.updateRotation = true;
             _navMeshAgent.updatePosition = true;
             _npc=GetComponent<NPC>();
         }
         
-        private void FixedUpdate()
+        protected void FixedUpdate()
         {
             IsRunning = _npc.isInDanger;
             HandleMovement();

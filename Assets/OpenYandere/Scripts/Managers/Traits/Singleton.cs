@@ -5,7 +5,7 @@ namespace OpenYandere.Managers.Traits
     internal class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static T _instance; 
-        private static readonly object Lock = new object();
+        private static readonly object Lock = new();
 
         protected void Awake()
         {

@@ -7,27 +7,23 @@ namespace OpenYandere.Characters.Sense
 {
     public class ViewSenses : Senses
     {
-        public enum viewSenseType
+        public enum ViewSenseType
         {
             cone,
             cylinder,
-
         }
-
-        [SerializeField] public viewSenseType senseType;
-
+        [SerializeField] public ViewSenseType senseType;
         [SerializeField] public SensesFilter filter;
         [SerializeField] public float radius;
-        [SerializeField] public float MaxSenseRange;
-        [SerializeField] public float MinSenseRange;
+        [SerializeField] public float MaxSenseRange, MinSenseRange;
         [SerializeField] public float currentSenseRange;
 
         [SerializeField] public int rayCount=1;
         [SerializeField] public LayerMask viewMask;
-        [SerializeField] [Range(0, 1)] public float _alert;
+        [SerializeField,Range(0, 1)] public float _alert;
 
         public List<Character> thingsIsee;
-        public float alert { get { return _alert; } set { _alert = Mathf.Clamp(value, 0, 1); } }
+        public float Alert { get { return _alert; } set { _alert = Mathf.Clamp(value, 0, 1); } }
 
 
         void Start()

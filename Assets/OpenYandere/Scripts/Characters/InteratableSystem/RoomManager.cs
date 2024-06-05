@@ -7,14 +7,14 @@ namespace OpenYandere.Characters.Interactions.InteractableCompoents
 {
     internal class RoomManager : Singleton<RoomManager>
     {
-        public List<InteratableCompoent> interactList;
-        public Dictionary<InteratableCompoent, InteratableCompoent.options> RoomInteractables;
+        public List<InteractableComponent> interactList;
+        public Dictionary<InteractableComponent, InteractableComponent.Options> RoomInteractables;
         // Start is called before the first frame update
         void Start()
         {
-            RoomInteractables = new Dictionary<InteratableCompoent, InteratableCompoent.options>();
-           var allInteract=(InteratableCompoent[]) FindObjectsByType(typeof(InteratableCompoent), FindObjectsSortMode.None);
-            interactList = new List<InteratableCompoent>( allInteract) ;
+            RoomInteractables = new Dictionary<InteractableComponent, InteractableComponent.Options>();
+           var allInteract=(InteractableComponent[]) FindObjectsByType(typeof(InteractableComponent), FindObjectsSortMode.None);
+            interactList = new List<InteractableComponent>( allInteract) ;
             updateAllInteractList();
         }
 
@@ -24,13 +24,13 @@ namespace OpenYandere.Characters.Interactions.InteractableCompoents
             updateAllInteractList();
         }
 
-        public Dictionary<InteratableCompoent, InteratableCompoent.options> getRoomInteractables()
+        public Dictionary<InteractableComponent, InteractableComponent.Options> getRoomInteractables()
         {
             return this.RoomInteractables;
         }
          public void  updateAllInteractList()
         {
-            foreach ( InteratableCompoent i in interactList)
+            foreach ( InteractableComponent i in interactList)
             {
                 i.updateList.Invoke(RoomInteractables);  
             }
