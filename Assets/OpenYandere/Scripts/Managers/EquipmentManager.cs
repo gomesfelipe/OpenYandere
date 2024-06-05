@@ -14,8 +14,8 @@ namespace OpenYandere.Managers
         public int maxPoolSize=10;
         [SerializeField] protected ItemBase currentHelmet, currentArmor, currentWeapon;
         [SerializeField] protected ItemBase[] allItems;
-        private Dictionary<ItemBase, ObjectPool<GameObject>> itemPools = new();
-
+        [SerializeField] private Dictionary<ItemBase, ObjectPool<GameObject>> itemPools = new();
+       
         private void Awake()
         {
 
@@ -31,6 +31,8 @@ namespace OpenYandere.Managers
 
                 itemPools[item] = poolForItem;
             }
+
+
            // if (allItems.Length > 0)
             //{
             //    EquipItem(ref currentWeapon, allItems[0], weaponPosition);
@@ -84,7 +86,10 @@ namespace OpenYandere.Managers
                 UnequipItem(equipPosition);
             }
 
-            GameObject itemInstance = itemPools[newItem].Get();
+            // GameObject itemInstance = itemPools[newItem].Get();
+            ObjectPool<GameObject> pool;
+            itemPools.TryGetValue(newItem, out pool);
+            GameObject itemInstance=pool.Get();
             if (itemInstance == null)
             {
                 Debug.LogWarning($"Could not retrieve an instance of {newItem.ItemName} from the ObjectPool.");

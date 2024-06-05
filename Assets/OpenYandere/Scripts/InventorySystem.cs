@@ -4,11 +4,21 @@ using UnityEngine;
 
 internal class InventorySystem : Singleton<InventorySystem>
 {
-    [SerializeField] protected List<ItemBase> items = new();
+    [SerializeField] protected List<ItemBase> items;
     // Eventos para notificar sobre mudanças no inventário.
     public delegate void InventoryChange();
     public event InventoryChange OnItemAdded, OnItemRemoved;
 
+    private void Awake()
+    {
+        base.Awake();
+    }
+    private void Start()
+    {
+            
+           // Debug.Log(GetItem(0).ItemDescription);
+        
+    }
     public bool AddItem(ItemBase itemToAdd)
     {
         // Logic to add item to the inventory (considering max capacity, stackability, etc.)

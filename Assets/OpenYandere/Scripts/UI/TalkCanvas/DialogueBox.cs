@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using OpenYandere.Characters.NPC;
 using OpenYandere.Characters.Player;
 using DG.Tweening;
+using TMPro;
 
 namespace OpenYandere.UI.TalkCanvas
 {
@@ -17,8 +18,13 @@ namespace OpenYandere.UI.TalkCanvas
         private NPC _interactingWithNPC;
         [SerializeField] private Animator _animator, _choicesAnimator;
         [SerializeField] private TextMeshProUGUI _characterName, _dialogueText;
+        [SerializeField] private RectTransform _DialogChoices;
+        [SerializeField] private RectTransform _FavorChoices;
+        [SerializeField] private GameObject btnChoiceTemplate;
         private RectTransform _rectTransform;
         private CanvasGroup _canvasGroup;
+
+        private Dictionary<NPC,ActivityBase.EndActivity> taskDelegate;
 
         private Vector3 _originalPosition;
 
@@ -34,13 +40,14 @@ namespace OpenYandere.UI.TalkCanvas
 
         private void Awake()
 	    {
+            taskDelegate = new Dictionary<NPC, ActivityBase.EndActivity>();
 		    _player = GameManager.Instance.PlayerManager.Player.GetComponent<Player>();
             _rectTransform = GetComponent<RectTransform>();
             if (!TryGetComponent<CanvasGroup>(out _canvasGroup))
             {
                 _canvasGroup = gameObject.AddComponent<CanvasGroup>();
             }
-
+           
             _canvasGroup.alpha = 0;
             _originalPosition = _rectTransform.anchoredPosition;
         }
@@ -81,6 +88,29 @@ namespace OpenYandere.UI.TalkCanvas
             _isVisible = true;
             _animator.SetBool("Visible", _isVisible);
             GameManager.Instance.PlayerManager.PlayerMovement.BlockMovement();
+        }
+        private void switchToFavorBox()
+        {
+            ActivityBase.EndActivity task;
+
+            Debug.Log(_interactingWithNPC.characterName);
+                if (!taskDelegate.TryGetValue(_interactingWithNPC, out task))
+                {
+                     TrackingTargetActivity t = ScriptableObject.CreateInstance<TrackingTargetActivity>();
+                    //TrackingTargetActivity t = new TrackingTargetActivity();
+                   // t.Tracktarget = _interactingWithNPC.player.transform;
+                    _interactingWithNPC.addRequest(t);
+                    //t.Tracktarget = _interactingWithNPC.player.gameObject.transform;
+                    t.TrackInterval = 60;
+                    t.Distance = 2;
+                    taskDelegate.Add(_interactingWithNPC, t.getEndActivityDelegate());
+                } else
+                {
+                    task.DynamicInvoke(_interactingWithNPC);
+                }
+          
+           // _FavorChoices.DOMove(_DialogChoices.position, 0.5f).SetEase(Ease.InBounce);
+           // _DialogChoices.DOMove(Vector3.one*100, 0.5f).SetEase(Ease.InBounce);
         }
         public void HideBox()
         {
@@ -145,27 +175,45 @@ namespace OpenYandere.UI.TalkCanvas
 	        }
             _interactingWithNPC.trustLevel += 1;
 	        _player.Reputation += 1;
+            CameraManager.Instance.unlockCamera();
         }
 		
         public void OnGossipButtonClicked()
         {
-			// TODO
+            // TODO
+            GossipUI.Instance.ActivateUI();
         }
 		
         public void OnPerformTaskButtonClicked()
         {
-	        // TODO
+            // TODO\
+            switchToFavorBox();
+            //CameraManager.Instance.unlockCamera();
         }
 		
         public void OnAskForFavorButtonClicked()
         {
-	        // TODO
+            // TODO
+            //CameraManager.Instance.unlockCamera();
+           
         }
 		
         public void OnExitButtonClicked()
         {
             HideBox();
+            CursorManager.Instance.lockCursor();
+            CameraManager.Instance.unlockCamera();
 	        // TODO
+        }
+
+        public GameObject btnFactory(string msg)
+        {
+          GameObject label= Instantiate(btnChoiceTemplate);
+
+
+            TextMeshPro text = label.GetComponentInChildren<TextMeshPro>();
+            text.text = msg;
+            return label;
         }
     }
 }

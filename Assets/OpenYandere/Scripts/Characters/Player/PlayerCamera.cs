@@ -5,6 +5,7 @@ namespace OpenYandere.Characters.Player
 {
 	public class PlayerCamera : MonoBehaviour
 	{
+		private bool _locked;
 		private PlayerMovement _playerMovement;
 		
 		private Vector3 _targetHeightOffset;
@@ -56,6 +57,8 @@ namespace OpenYandere.Characters.Player
 
 		private void LateUpdate()
 		{
+			if (_locked) return;
+
 			HorizontalAxis += Input.GetAxis("Mouse X") * _mouseSensitivity;
 			VerticalAxis -= Input.GetAxis("Mouse Y") * _mouseSensitivity;
 			
@@ -89,5 +92,6 @@ namespace OpenYandere.Characters.Player
 			HorizontalAxis = _targetTransform.eulerAngles.y;
 			VerticalAxis = _targetTransform.eulerAngles.x;
 		}
+		public void setLocked(bool b) { this._locked = b; }
 	}
 }

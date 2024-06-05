@@ -56,6 +56,8 @@ namespace OpenYandere.UI.Interactions
                 
                 //Call the function.
                 OnPromptTriggered?.Invoke();
+
+                this.gameObject.SetActive(false);
             }
             // If the user held the key then stopped, the fill amount would be more than
             // zero, so we need to reset the variables.

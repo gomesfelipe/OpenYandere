@@ -30,6 +30,7 @@ namespace OpenYandere.Characters.Player
         {
             _characterController = GetComponent<CharacterController>();
             _characterAnimator = GetComponent<CharacterAnimator>();
+           
         }
         
         private void FixedUpdate()

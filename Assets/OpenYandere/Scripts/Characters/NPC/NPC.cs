@@ -5,6 +5,10 @@ using System.Collections.Generic;
 using Unity.Services.Analytics.Internal;
 using UnityEngine;
 using UnityEngine.AI;
+using OpenYandere.Characters.SharedTrackers;
+using OpenYandere.Characters.Sense;
+using System;
+using OpenYandere.Characters.Interactions.InteractableCompoents;
 
 namespace OpenYandere.Characters.NPC
 {
@@ -12,19 +16,35 @@ namespace OpenYandere.Characters.NPC
 	[RequireComponent(typeof(NPCMovement))]
 	public abstract class NPC : Character
 	{
+        // i think a State machine is needed to keep logic clean,heres some ideas
+        //1.NPCFreeTimeState <- Ai finds things to do
+        //2.NPCLessonState <-go to class and handle class stuff
+        //3.NPCCustomEventState <- for special events like Fire alarm or school hall meetings
         public NPCMovement NPCMovement => _npcMovement;
         [SerializeField] protected NPCMovement _npcMovement;
-        public GameObject player;
+        
         public float detectionDistance = 10.0f, dangerDistance = 5.0f;
         public bool isPlayerDetected = false, isInDanger = false;
-        public float fieldOfViewAngle = 120.0f;
+        public float fieldOfViewAngle = 120.0f; 
         public LayerMask viewMask;
+
+        [Header("Activity/Task")]
         public Routine dailyRoutine;
+        public Routine RequestOrEmergenRoutine;
+
+        public List<Character> people;
+
         private int currentActivityIndex = 0;
+
 
         private void Awake()
         {
+            base.Awake();
             _npcMovement=GetComponent<NPCMovement>();
+            
+            
+
+           // RequestOrEmergenRoutine = new Routine();
 
         }
         protected void Start()
@@ -34,11 +54,17 @@ namespace OpenYandere.Characters.NPC
             {
                 dailyRoutine.activities[0].OnActivityStart(this);
             }
+            if (RequestOrEmergenRoutine.activities.Count > 0)
+            {
+                RequestOrEmergenRoutine.activities[0].Reset();
+            }
         }
         void FixedUpdate()
         {
+            
             DetectPlayer();
-
+            CheckRequest();
+            FindInteractable();
             if (isInDanger)
             {
                 _npcMovement.FleeFromPlayer();
@@ -46,9 +72,46 @@ namespace OpenYandere.Characters.NPC
             }
         }
 
-
-        private void CheckActivity()
+       private void FindInteractable()
         {
+            InteratableCompoent targetobject;
+            foreach(KeyValuePair<InteratableCompoent,InteratableCompoent.options> v in RoomManager.Instance.getRoomInteractables())
+            {
+                foreach(KeyValuePair<int,InteratableCompoent.InteractableInfo> info in v.Value.value)
+                {
+                     if(mind.checkIncentives(info.Value.incentives))
+                    {
+                        Debug.Log(characterName + " wants " + info.Value.infoName);
+                    }
+                }
+            }// NoteToMe: current checking system have a couple of issue
+            // 1.It cant really pick highest priorities
+            // 2. it should return a startactivityTicket
+        }
+
+        
+        public void addRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
+        private void CheckRequest()
+        {
+           // Debug.Log("request");
+            if (RequestOrEmergenRoutine.activities.Count == 0) { return; }
+            ActivityBase currentRequest = RequestOrEmergenRoutine.activities[0];
+          
+            if (!currentRequest.started) currentRequest.OnActivityStart(this);
+            currentRequest.DoActivity(this);
+
+            if(currentRequest.finished)
+            {
+                currentRequest.OnActivityEnd(this);
+                RequestOrEmergenRoutine.activities.Remove(currentRequest);
+            }
+        }
+       
+
+        private void CheckActivity()// this only update by the clock delegate...
+        {   
+            if (RequestOrEmergenRoutine.activities.Count > 0) { return; }// only do daily routine when no request or emergency
+
             if ((currentActivityIndex >= dailyRoutine.activities.Count) || dailyRoutine.activities.Count == 0) return;
 
             ActivityBase currentActivity = dailyRoutine.activities[currentActivityIndex];
@@ -79,8 +142,14 @@ namespace OpenYandere.Characters.NPC
             
         }
 
-        void DetectPlayer()
+        private void DetectPlayer()
         {
+            ViewSenses vs =(ViewSenses) mind.getSenses<ViewSenses>();
+            if (vs!=null)
+            {
+                people=vs.Isaw();
+            }
+            /*
             Vector3 directionToPlayer = player.transform.position - this.transform.position;
             float distanceToPlayer = directionToPlayer.magnitude;
             float angleBetweenNPCAndPlayer = Vector3.Angle(transform.forward, directionToPlayer);
@@ -105,7 +174,7 @@ namespace OpenYandere.Characters.NPC
             {
                 isPlayerDetected = false;
                 isInDanger = false;
-            }
+            } */
         }
 
         IEnumerator LookAtWeaponAndReact()
