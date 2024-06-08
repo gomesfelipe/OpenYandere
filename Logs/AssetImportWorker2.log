@@ -15,7 +15,7 @@ D:/Unity Projects/OpenYandere
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-51216
+55812
 -job-worker-count
 9
 -background-job-worker-count
@@ -58,12 +58,12 @@ D:/Unity Projects/OpenYandere
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10792] Host "[IP] 172.23.32.1 [Port] 0 [Flags] 2 [Guid] 1109232979 [EditorId] 1109232979 [Version] 1048832 [Id] WindowsEditor(7,Rotwang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-Player connection [10792] Host "[IP] 172.23.32.1 [Port] 0 [Flags] 2 [Guid] 1109232979 [EditorId] 1109232979 [Version] 1048832 [Id] WindowsEditor(7,Rotwang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [31268] Host "[IP] 172.23.96.1 [Port] 0 [Flags] 2 [Guid] 861408482 [EditorId] 861408482 [Version] 1048832 [Id] WindowsEditor(7,Rotwang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [31268] Host "[IP] 172.23.96.1 [Port] 0 [Flags] 2 [Guid] 861408482 [EditorId] 861408482 [Version] 1048832 [Id] WindowsEditor(7,Rotwang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 [Physics::Module] Initialized MultithreadedJobDispatcher with 9 workers.
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 43.85 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 19.54 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.20f1 (0e25a174756c)
 [Subsystems] Discovering subsystems at path B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/Resources/UnitySubsystems
@@ -79,43 +79,43 @@ Initialize mono
 Mono path[0] = 'B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/Managed'
 Mono path[1] = 'B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56796
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001700 seconds.
-- Loaded All Assemblies, in  0.375 seconds
+Registered in 0.003247 seconds.
+- Loaded All Assemblies, in 30.642 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.290 seconds
-Domain Reload Profiling: 665ms
-	BeginReloadAssembly (128ms)
+- Finished resetting the current domain, in  3.660 seconds
+Domain Reload Profiling: 34302ms
+	BeginReloadAssembly (17151ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (157ms)
-		LoadAssemblies (128ms)
+		CreateAndSetChildDomain (85ms)
+	RebuildCommonClasses (12059ms)
+	RebuildNativeTypeToScriptingClass (102ms)
+	initialDomainReloadingComplete (883ms)
+	LoadAllAssembliesAndSetupDomain (448ms)
+		LoadAssemblies (17033ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (154ms)
-			TypeCache.Refresh (153ms)
-				TypeCache.ScanAssembly (140ms)
+		AnalyzeDomain (419ms)
+			TypeCache.Refresh (383ms)
+				TypeCache.ScanAssembly (358ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (290ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (3661ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (234ms)
+		SetupLoadedEditorAssemblies (3268ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (170ms)
-			ProcessInitializeOnLoadMethodAttributes (46ms)
+			InitializePlatformSupportModulesInManaged (57ms)
+			SetLoadedEditorAssemblies (1168ms)
+			BeforeProcessingInitializeOnLoad (8ms)
+			ProcessInitializeOnLoadAttributes (1805ms)
+			ProcessInitializeOnLoadMethodAttributes (230ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -127,352 +127,57 @@ Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.362 seconds
-Refreshing native plugins compatible for Editor in 4.09 ms, found 8 plugins.
+- Loaded All Assemblies, in 27.665 seconds
+Refreshing native plugins compatible for Editor in 54.96 ms, found 8 plugins.
 Native extension for WindowsStandalone target not found
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Refreshing native plugins compatible for Editor in 4.18 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 21.34 ms, found 8 plugins.
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.171 seconds
-Domain Reload Profiling: 2532ms
-	BeginReloadAssembly (772ms)
+- Finished resetting the current domain, in  6.315 seconds
+Domain Reload Profiling: 33978ms
+	BeginReloadAssembly (7286ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (12ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (512ms)
-		LoadAssemblies (350ms)
+		CreateAndSetChildDomain (1924ms)
+	RebuildCommonClasses (225ms)
+	RebuildNativeTypeToScriptingClass (200ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (19884ms)
+		LoadAssemblies (18935ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (263ms)
-			TypeCache.Refresh (201ms)
-				TypeCache.ScanAssembly (179ms)
-			BuildScriptInfoCaches (46ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (1171ms)
+		AnalyzeDomain (2825ms)
+			TypeCache.Refresh (1595ms)
+				TypeCache.ScanAssembly (1469ms)
+			BuildScriptInfoCaches (1182ms)
+			ResolveRequiredComponents (43ms)
+	FinalizeReload (6317ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (732ms)
+		SetupLoadedEditorAssemblies (4489ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (69ms)
-			ProcessInitializeOnLoadAttributes (441ms)
-			ProcessInitializeOnLoadMethodAttributes (212ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (376ms)
+			BeforeProcessingInitializeOnLoad (1609ms)
+			ProcessInitializeOnLoadAttributes (2038ms)
+			ProcessInitializeOnLoadMethodAttributes (457ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 3.86 ms, found 8 plugins.
+		AwakeInstancesAfterBackupRestoration (15ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 6.82 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 261 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7765 unused Assets / (7.9 MB). Loaded Objects now: 8487.
-Memory consumption went from 215.9 MB to 208.0 MB.
-Total: 13.732300 ms (FindLiveObjects: 0.892400 ms CreateObjectMapping: 1.275100 ms MarkObjects: 7.984500 ms  DeleteObjects: 3.579500 ms)
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.775 seconds
-Refreshing native plugins compatible for Editor in 4.47 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.956 seconds
-Domain Reload Profiling: 1734ms
-	BeginReloadAssembly (224ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (59ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (23ms)
-	LoadAllAssembliesAndSetupDomain (479ms)
-		LoadAssemblies (392ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (202ms)
-			TypeCache.Refresh (13ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (173ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (957ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (698ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (74ms)
-			ProcessInitializeOnLoadAttributes (424ms)
-			ProcessInitializeOnLoadMethodAttributes (191ms)
-			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
-Refreshing native plugins compatible for Editor in 4.32 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 41 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7763 unused Assets / (8.4 MB). Loaded Objects now: 8494.
-Memory consumption went from 182.2 MB to 173.9 MB.
-Total: 16.755500 ms (FindLiveObjects: 0.968600 ms CreateObjectMapping: 1.817200 ms MarkObjects: 9.751900 ms  DeleteObjects: 4.216800 ms)
-
-Prepare: number of updated asset objects reloaded= 10
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.794 seconds
-Refreshing native plugins compatible for Editor in 4.63 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.937 seconds
-Domain Reload Profiling: 1735ms
-	BeginReloadAssembly (229ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (63ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (24ms)
-	LoadAllAssembliesAndSetupDomain (492ms)
-		LoadAssemblies (395ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (214ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (184ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (937ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (712ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (74ms)
-			ProcessInitializeOnLoadAttributes (422ms)
-			ProcessInitializeOnLoadMethodAttributes (206ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (24ms)
-Refreshing native plugins compatible for Editor in 5.85 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7763 unused Assets / (8.5 MB). Loaded Objects now: 8496.
-Memory consumption went from 183.1 MB to 174.7 MB.
-Total: 17.461700 ms (FindLiveObjects: 1.154500 ms CreateObjectMapping: 1.831600 ms MarkObjects: 9.895900 ms  DeleteObjects: 4.578700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.771 seconds
-Refreshing native plugins compatible for Editor in 5.67 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.936 seconds
-Domain Reload Profiling: 1710ms
-	BeginReloadAssembly (213ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (53ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (488ms)
-		LoadAssemblies (386ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (214ms)
-			TypeCache.Refresh (19ms)
-				TypeCache.ScanAssembly (6ms)
-			BuildScriptInfoCaches (178ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (936ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (700ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (90ms)
-			ProcessInitializeOnLoadAttributes (407ms)
-			ProcessInitializeOnLoadMethodAttributes (191ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (18ms)
-Refreshing native plugins compatible for Editor in 4.34 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 44 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7812 unused Assets / (8.4 MB). Loaded Objects now: 8539.
-Memory consumption went from 187.5 MB to 179.1 MB.
-Total: 17.179900 ms (FindLiveObjects: 0.958100 ms CreateObjectMapping: 1.460700 ms MarkObjects: 9.191200 ms  DeleteObjects: 5.568800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 5992.838768 seconds.
-  path: Assets/OpenYandere/Prefabs/Player.prefab
-  artifactKey: Guid(a7a8dcd6cf48f5544a9a2216ca3149e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Prefabs/Player.prefab using Guid(a7a8dcd6cf48f5544a9a2216ca3149e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '907cdadaa3067fd02658def884859d84') in 0.5514338 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 757
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.615301 seconds.
-  path: Assets/OpenYandere/Graphics/Materials
-  artifactKey: Guid(b72be4f8327e65849a8647a7eff7318a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials using Guid(b72be4f8327e65849a8647a7eff7318a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '30e8f3c29fb16cec629d34f213c48ce1') in 0.0006175 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.405191 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/0e7d6f8f0da4abe5c414d3de79f9f2fe.png
-  artifactKey: Guid(4c5fd482b30114e4c8993bb74ab75142) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/0e7d6f8f0da4abe5c414d3de79f9f2fe.png using Guid(4c5fd482b30114e4c8993bb74ab75142) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cac023f218b327f780835a61943d096a') in 0.0309072 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/Curtain 1 Material.mat
-  artifactKey: Guid(1f299c9f37484468791b0563e444b8ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/Curtain 1 Material.mat using Guid(1f299c9f37484468791b0563e444b8ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72694942a7823ea70d817e8814702191') in 0.1544795 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/Title Text Material.mat
-  artifactKey: Guid(c7ed073f1e3c5024a9c06f4a17bb57cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/Title Text Material.mat using Guid(c7ed073f1e3c5024a9c06f4a17bb57cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ef08d03de121c8736f7a493947e57acb') in 0.0146436 seconds
-Internal: JobTempAlloc has allocations that are more than the maximum lifespan of 4 frames old - this is not allowed and likely a leak
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/billboard.mat
-  artifactKey: Guid(acd13b820dc060f45b58d7850b94ea1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/billboard.mat using Guid(acd13b820dc060f45b58d7850b94ea1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4af3e476ba8e352b9f53b9e610fc3a1a') in 0.0211759 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 28
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/New Render Texture.mat
-  artifactKey: Guid(090ecfd445a52824b94c132e29fde467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/New Render Texture.mat using Guid(090ecfd445a52824b94c132e29fde467) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2e4c50835df0420f70cb642ee556bc05') in 0.0209947 seconds
-Internal: JobTempAlloc has allocations that are more than the maximum lifespan of 4 frames old - this is not allowed and likely a leak
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/Pink Line Material.mat
-  artifactKey: Guid(0a1f93b787efd40ddb69555c7690b36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/Pink Line Material.mat using Guid(0a1f93b787efd40ddb69555c7690b36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '53d92ec841fc04b6a545c953477e79bd') in 0.0139356 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/Shadow Material.mat
-  artifactKey: Guid(730add84c5837ec4c9d55c8f3dd1d8df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/Shadow Material.mat using Guid(730add84c5837ec4c9d55c8f3dd1d8df) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '670bcbae7b1110475748cbae4ef94a0a') in 0.1114244 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/Curtain 2 Material.mat
-  artifactKey: Guid(bf37d9332538e486f88bdb272ec0324e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/Curtain 2 Material.mat using Guid(bf37d9332538e486f88bdb272ec0324e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c9af5248688cf61dd037bd0ddab05099') in 0.0143016 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/Curtain Effect Material.mat
-  artifactKey: Guid(b24084bed53f447b3b1351039524953a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/Curtain Effect Material.mat using Guid(b24084bed53f447b3b1351039524953a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9b22f8f042dda284da04fe6992acf39a') in 0.0300795 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/Heart Particle Material.mat
-  artifactKey: Guid(da7236c622971ad448b8b2e2d8287ecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/Heart Particle Material.mat using Guid(da7236c622971ad448b8b2e2d8287ecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eaf7451f0aa40d3477e56457a33f7227') in 0.0785048 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/OpenYandere/Graphics/Materials/Background White Material.mat
-  artifactKey: Guid(ab2c43428cb6a4cba9d63cc392462ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Materials/Background White Material.mat using Guid(ab2c43428cb6a4cba9d63cc392462ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '643ed08372c1381357cd31830e8c06ae') in 0.5992311 seconds
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 28
+Unloading 270 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7822 unused Assets / (8.4 MB). Loaded Objects now: 8553.
+Memory consumption went from 221.2 MB to 212.8 MB.
+Total: 200.544500 ms (FindLiveObjects: 85.745900 ms CreateObjectMapping: 2.506600 ms MarkObjects: 48.888500 ms  DeleteObjects: 63.401800 ms)
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 AssetImportWorker is now disconnected from the server
 Process exiting
 Exiting without the bug reporter. Application will terminate with return code 0

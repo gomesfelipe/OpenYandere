@@ -22,6 +22,11 @@ scopes = {
 	"last_search.8DF93126" = ""
 	"OpenInspectorPreview.8DF93126" = "0"
 	"currentGroup.8DF93126" = null
+	"picker_window_position_offset.075BCD15" = "77,33337;88,44444;320;550,2222"
+	"picker_visibility_flags.075BCD15" = "264"
+	"picker_item_size.075BCD15" = "96"
+	"picker_inspector.075BCD15" = "0"
+	"picker_current_group.075BCD15" = "all"
 }
 providers = {
 	asset = {

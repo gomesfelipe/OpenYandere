@@ -20,9 +20,9 @@ namespace OpenYandere.Characters.NPC
         
         [Header("Settings:")]
         [Tooltip("The walking speed of the NPC.")]
-        public float WalkSpeed = 2.0f;
+        public float WalkSpeed = 4.0f;
         [Tooltip("The running speed of the NPC.")]
-        public float RunSpeed = 6.0f;
+        public float RunSpeed = 12.0f;
         [Tooltip("Is the NPC running?")]
         public bool IsRunning;
         
@@ -72,21 +72,34 @@ namespace OpenYandere.Characters.NPC
             _characterAnimator.UpdateData(_animatorData);
         }
 
+
         public void FleeFromPlayer()
         {
-            // Direção básica de fuga.
-            Vector3 fleeDirection = (transform.position - player.transform.position).normalized;
-            // Adicionando variação aleatória à direção de fuga.
-            float randomAngle = UnityEngine.Random.Range(-30f, 30f);
-            fleeDirection = Quaternion.Euler(0, randomAngle, 0) * fleeDirection;
-            // Distância variável de fuga.
-            float fleeDistance = UnityEngine.Random.Range(5f, 15f);
-            // Calculando a posição de fuga.
-            Vector3 fleePosition = transform.position + fleeDirection * fleeDistance;
-            var movementSpeed = IsRunning ? RunSpeed : WalkSpeed;
-            _navMeshAgent.speed = movementSpeed;
-            _navMeshAgent.SetDestination(fleePosition);
-            _animatorData.IsRunning = IsRunning;
+            Vector3 fleeDirection = AIBehaviourFlee.FleeFrom(transform.position, player.transform.position);
+            float fleeDistance = 20f; // Distância fixa de fuga
+
+            Vector3 potentialFleePosition = transform.position + new Vector3(fleeDirection.x, 0, fleeDirection.y) * fleeDistance;
+
+            // Incluindo camadas "Obstacle" e "Default" na máscara
+            int layerMask = LayerMask.GetMask("Obstacle") | LayerMask.GetMask("Default");
+            Collider[] obstacles = Physics.OverlapSphere(transform.position, 30f, layerMask);
+            Vector3 bestHidingPosition = AIBehaviourHide.ClosestHidingPosition(transform.position, player.transform.position, obstacles, obstacles.Length);
+
+            if (bestHidingPosition != transform.position)
+            {
+                _navMeshAgent.speed = RunSpeed;
+                _navMeshAgent.SetDestination(bestHidingPosition);
+                _animatorData.IsRunning = true;
+                _characterAnimator.UpdateData(_animatorData);
+            }
+            else
+            {
+                // Se não encontrar uma posição de esconderijo válida, fugir para a posição de fuga potencial
+                _navMeshAgent.speed = RunSpeed;
+                _navMeshAgent.SetDestination(potentialFleePosition);
+                _animatorData.IsRunning = true;
+                _characterAnimator.UpdateData(_animatorData);
+            }
         }
 
         public void Resume()

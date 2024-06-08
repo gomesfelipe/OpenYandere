@@ -8,15 +8,15 @@ namespace OpenYandere.Characters.Player
     [RequireComponent(typeof(CharacterAnimator), typeof(CharacterController), typeof(NavMeshObstacle))]
     public class PlayerMovement : MonoBehaviour
     {
-        private MovementStateMachine _movementStateMachine;
+        protected MovementStateMachine _movementStateMachine;
         
-        private InputData _inputData;
+        protected InputData _inputData;
         private AnimatorData _animatorData;
         
-        private CharacterController _characterController;
+    [SerializeField] protected CharacterController _characterController;
         private CharacterAnimator _characterAnimator;
         
-        private float _movementSpeed, _cameraHorizontalAxis;
+        protected float _movementSpeed, _cameraHorizontalAxis;
         
         [Header("Movement Settings:")]
         [Tooltip("The walking speed of the player.")]

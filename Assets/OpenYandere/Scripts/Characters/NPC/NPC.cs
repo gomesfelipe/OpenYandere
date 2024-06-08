@@ -9,7 +9,6 @@ using OpenYandere.Characters.SharedTrackers;
 using OpenYandere.Characters.Sense;
 using System;
 using OpenYandere.Characters.Interactions.InteractableCompoents;
-
 namespace OpenYandere.Characters.NPC
 {
 
@@ -64,7 +63,9 @@ namespace OpenYandere.Characters.NPC
             
             DetectPlayer();
             CheckRequest();
-            FindInteractable();
+            if(transform.hasChanged){
+                FindInteractable();            
+            }
             if (isInDanger)
             {
                 _npcMovement.FleeFromPlayer();
@@ -89,7 +90,6 @@ namespace OpenYandere.Characters.NPC
             // 2. it should return a startactivityTicket
         }
 
-        
         public void AddRequest(ActivityBase ab) { this.RequestOrEmergenRoutine.activities.Add(ab); }
         private void CheckRequest()
         {
@@ -144,37 +144,36 @@ namespace OpenYandere.Characters.NPC
 
         private void DetectPlayer()
         {
-            ViewSenses vs =(ViewSenses) mind.getSenses<ViewSenses>();
-            if (vs!=null)
+            ViewSenses vs = (ViewSenses)mind.getSenses<ViewSenses>();
+            if (vs != null)
             {
-                people=vs.Isaw();
-            }
-            /*
-            Vector3 directionToPlayer = player.transform.position - this.transform.position;
-            float distanceToPlayer = directionToPlayer.magnitude;
-            float angleBetweenNPCAndPlayer = Vector3.Angle(transform.forward, directionToPlayer);
-
-            if (angleBetweenNPCAndPlayer < fieldOfViewAngle * 0.5f)
-            {
-                if (Physics.Raycast(transform.position + Vector3.up, directionToPlayer.normalized, out RaycastHit hit, detectionDistance, viewMask))
+                people = vs.Isaw();
+                foreach (Character character in people)
                 {
-                    if (hit.collider.gameObject == player)
+                    if (character is OpenYandere.Characters.Player.Player player)
                     {
-                        isPlayerDetected = true;
-                        isInDanger = distanceToPlayer < dangerDistance && GameManager.Instance.equipmentManager.GetWeapon() != null;
-                    }
-                    else
-                    {
-                        isPlayerDetected = false;
-                        isInDanger = false;
+                        // Calcule a distância até o jogador
+                        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+                        // Verifique se o jogador está armado
+                        bool playerIsArmed = GameManager.Instance.equipmentManager.GetWeapon() != null;
+
+                        // Verifique se o NPC está em perigo
+                        isInDanger = distanceToPlayer < dangerDistance && playerIsArmed;
+
+                        if (isInDanger)
+                        {
+                            // O jogador foi detectado e está armado
+                            isPlayerDetected = true;
+                            return;
+                        }
                     }
                 }
             }
-            else
-            {
-                isPlayerDetected = false;
-                isInDanger = false;
-            } */
+
+            // Se nenhum jogador armado foi detectado
+            isPlayerDetected = false;
+            isInDanger = false;
         }
 
         IEnumerator LookAtWeaponAndReact()
