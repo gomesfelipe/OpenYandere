@@ -4525,12 +4525,12 @@ PrefabInstance:
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     - target: {fileID: 6553617411788002219, guid: a33a88705f27eb347ab0942fc7e78e6b,
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7651,7 +7651,7 @@ PrefabInstance:
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     - target: {fileID: 135981748367628120, guid: a33a88705f27eb347ab0942fc7e78e6b,
         type: 3}
       propertyPath: m_Radius
@@ -7711,7 +7711,7 @@ PrefabInstance:
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8482,12 +8482,6 @@ MonoBehaviour:
   clockTimeText: {fileID: 262670472}
   dayOfWeekText: {fileID: 1329563633}
   phaseOfDayText: {fileID: 943441868}
---- !u!4 &561715328 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3258166863403141629, guid: a7a8dcd6cf48f5544a9a2216ca3149e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 3036476946546232279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &571152006
 GameObject:
   m_ObjectHideFlags: 0
@@ -11907,7 +11901,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.53333336, b: 0, a: 1}
-  m_Intensity: 1.32
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -16105,7 +16099,7 @@ PrefabInstance:
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     - target: {fileID: 4118918079489169681, guid: a33a88705f27eb347ab0942fc7e78e6b,
         type: 3}
       propertyPath: i
@@ -16126,7 +16120,7 @@ PrefabInstance:
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     - target: {fileID: 7792850226330137176, guid: a33a88705f27eb347ab0942fc7e78e6b,
         type: 3}
       propertyPath: _alert
@@ -20316,7 +20310,7 @@ PrefabInstance:
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     - target: {fileID: 3364738493290823807, guid: a33a88705f27eb347ab0942fc7e78e6b,
         type: 3}
       propertyPath: m_IncludeLayers.m_Bits
@@ -20326,7 +20320,7 @@ PrefabInstance:
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20569,12 +20563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1891167913 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6563770757230495642, guid: a7a8dcd6cf48f5544a9a2216ca3149e8,
-    type: 3}
-  m_PrefabInstance: {fileID: 3036476946546232279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1913181022
 GameObject:
   m_ObjectHideFlags: 0
@@ -21024,7 +21012,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1891167913}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1619939140}
   m_CommonLens: 1
   m_Lens:
@@ -21841,7 +21829,7 @@ PrefabInstance:
         type: 3}
       propertyPath: headIKTarget
       value: 
-      objectReference: {fileID: 561715328}
+      objectReference: {fileID: 0}
     - target: {fileID: 1443609722895258249, guid: a7a8dcd6cf48f5544a9a2216ca3149e8,
         type: 3}
       propertyPath: m_Enabled

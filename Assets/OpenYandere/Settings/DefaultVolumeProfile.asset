@@ -459,10 +459,10 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 6
   intensity:
     m_OverrideState: 1
-    m_Value: 0.035
+    m_Value: 0.11
   response:
     m_OverrideState: 1
     m_Value: 0.8
@@ -543,7 +543,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.086
 --- !u!114 &3394858349103476803
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -705,7 +705,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   gaussianStart:
     m_OverrideState: 1
     m_Value: 10
@@ -755,7 +755,7 @@ MonoBehaviour:
     dimension: 1
   contribution:
     m_OverrideState: 1
-    m_Value: 0.085
+    m_Value: 0.146
 --- !u!114 &8429518898717972978
 MonoBehaviour:
   m_ObjectHideFlags: 3

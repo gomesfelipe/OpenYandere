@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0301de13ca2336c44875697a8c4f8aeb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249848
+  packageName: Control Rig
+  packageVersion: 1.0
+  assetPath: Assets/Ash Assets/Control Rig/Editor/ControlRigBuilder.cs
+  uploadId: 618097

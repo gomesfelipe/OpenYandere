@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dd876f6e9f25810419151686a1e43383
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249848
+  packageName: Control Rig
+  packageVersion: 1.0
+  assetPath: Assets/Ash Assets/Control Rig/Scripts/Rig_References.cs
+  uploadId: 618097

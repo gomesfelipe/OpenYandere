@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f640d3c37e0943c4c9cfb2d24dbe33b7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 249848
+  packageName: Control Rig
+  packageVersion: 1.0
+  assetPath: Assets/Ash Assets/Control Rig/Models/simple test.playable
+  uploadId: 618097

@@ -15,7 +15,7 @@ D:/Unity Projects/OpenYandere
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55812
+56477
 -job-worker-count
 9
 -background-job-worker-count
@@ -58,12 +58,12 @@ D:/Unity Projects/OpenYandere
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [30852] Host "[IP] 172.23.96.1 [Port] 0 [Flags] 2 [Guid] 3975850373 [EditorId] 3975850373 [Version] 1048832 [Id] WindowsEditor(7,Rotwang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-Player connection [30852] Host "[IP] 172.23.96.1 [Port] 0 [Flags] 2 [Guid] 3975850373 [EditorId] 3975850373 [Version] 1048832 [Id] WindowsEditor(7,Rotwang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [14720] Host "[IP] 172.27.80.1 [Port] 0 [Flags] 2 [Guid] 3387213542 [EditorId] 3387213542 [Version] 1048832 [Id] WindowsEditor(7,Rotwang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [14720] Host "[IP] 172.27.80.1 [Port] 0 [Flags] 2 [Guid] 3387213542 [EditorId] 3387213542 [Version] 1048832 [Id] WindowsEditor(7,Rotwang) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 [Physics::Module] Initialized MultithreadedJobDispatcher with 9 workers.
 Library Redirect Path: Library/
-Refreshing native plugins compatible for Editor in 40.96 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 6.82 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.20f1 (0e25a174756c)
 [Subsystems] Discovering subsystems at path B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/Resources/UnitySubsystems
@@ -79,43 +79,43 @@ Initialize mono
 Mono path[0] = 'B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/Managed'
 Mono path[1] = 'B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56572
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: B:/Program Files/Unity/Editor/2023.2.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003967 seconds.
-- Loaded All Assemblies, in 51.459 seconds
+Registered in 0.002479 seconds.
+- Loaded All Assemblies, in  0.533 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in 30.138 seconds
-Domain Reload Profiling: 81597ms
-	BeginReloadAssembly (33627ms)
+- Finished resetting the current domain, in  0.410 seconds
+Domain Reload Profiling: 943ms
+	BeginReloadAssembly (198ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (15945ms)
-	RebuildNativeTypeToScriptingClass (82ms)
-	initialDomainReloadingComplete (200ms)
-	LoadAllAssembliesAndSetupDomain (1604ms)
-		LoadAssemblies (33668ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (210ms)
+		LoadAssemblies (197ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1557ms)
-			TypeCache.Refresh (1554ms)
-				TypeCache.ScanAssembly (1444ms)
-			BuildScriptInfoCaches (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (30139ms)
+		AnalyzeDomain (206ms)
+			TypeCache.Refresh (203ms)
+				TypeCache.ScanAssembly (183ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (411ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (29805ms)
+		SetupLoadedEditorAssemblies (330ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (112ms)
-			SetLoadedEditorAssemblies (462ms)
-			BeforeProcessingInitializeOnLoad (11ms)
-			ProcessInitializeOnLoadAttributes (29051ms)
-			ProcessInitializeOnLoadMethodAttributes (169ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (246ms)
+			ProcessInitializeOnLoadMethodAttributes (61ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -127,1259 +127,26 @@ Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in 11.090 seconds
-Refreshing native plugins compatible for Editor in 77.99 ms, found 8 plugins.
+- Loaded All Assemblies, in  1.441 seconds
+Refreshing native plugins compatible for Editor in 5.10 ms, found 8 plugins.
 Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Refreshing native plugins compatible for Editor in 7.72 ms, found 8 plugins.
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in 21.281 seconds
-Domain Reload Profiling: 32369ms
-	BeginReloadAssembly (1805ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (153ms)
-	RebuildCommonClasses (89ms)
-	RebuildNativeTypeToScriptingClass (24ms)
-	initialDomainReloadingComplete (82ms)
-	LoadAllAssembliesAndSetupDomain (9087ms)
-		LoadAssemblies (6899ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (2637ms)
-			TypeCache.Refresh (2386ms)
-				TypeCache.ScanAssembly (2281ms)
-			BuildScriptInfoCaches (200ms)
-			ResolveRequiredComponents (37ms)
-	FinalizeReload (21281ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (17571ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (84ms)
-			BeforeProcessingInitializeOnLoad (7456ms)
-			ProcessInitializeOnLoadAttributes (7317ms)
-			ProcessInitializeOnLoadMethodAttributes (2705ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (18ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.22 seconds
-Refreshing native plugins compatible for Editor in 40.55 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 270 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7822 unused Assets / (10.4 MB). Loaded Objects now: 8553.
-Memory consumption went from 227.1 MB to 216.7 MB.
-Total: 73.936000 ms (FindLiveObjects: 21.175200 ms CreateObjectMapping: 3.666700 ms MarkObjects: 27.683800 ms  DeleteObjects: 21.243500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 19451.402246 seconds.
-  path: Assets/OpenYandere/Models/stylized-fountain/textures/DefaultMaterial_Mixed_AO.png
-  artifactKey: Guid(58f9a30d837098347b84740e2d6da6cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/stylized-fountain/textures/DefaultMaterial_Mixed_AO.png using Guid(58f9a30d837098347b84740e2d6da6cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0280ddb8339df599282f5a6bc406930a') in 2.4476985 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  2.013 seconds
-Refreshing native plugins compatible for Editor in 11.38 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.654 seconds
-Domain Reload Profiling: 3673ms
-	BeginReloadAssembly (461ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (11ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (128ms)
-	RebuildCommonClasses (774ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (717ms)
-		LoadAssemblies (675ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (292ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (253ms)
-			ResolveRequiredComponents (21ms)
-	FinalizeReload (1654ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1238ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (18ms)
-			BeforeProcessingInitializeOnLoad (137ms)
-			ProcessInitializeOnLoadAttributes (753ms)
-			ProcessInitializeOnLoadMethodAttributes (322ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (23ms)
-Refreshing native plugins compatible for Editor in 15.59 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 41 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (10.0 MB). Loaded Objects now: 8565.
-Memory consumption went from 192.0 MB to 182.0 MB.
-Total: 42.626900 ms (FindLiveObjects: 1.842100 ms CreateObjectMapping: 2.362600 ms MarkObjects: 27.574400 ms  DeleteObjects: 10.845600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in 82.415 seconds
-Refreshing native plugins compatible for Editor in 8.96 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in 29.382 seconds
-Domain Reload Profiling: 111761ms
-	BeginReloadAssembly (5187ms)
-		ExecutionOrderSort (1ms)
-		DisableScriptedObjects (95ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (2ms)
-		CreateAndSetChildDomain (1465ms)
-	RebuildCommonClasses (314ms)
-	RebuildNativeTypeToScriptingClass (46ms)
-	initialDomainReloadingComplete (111ms)
-	LoadAllAssembliesAndSetupDomain (76719ms)
-		LoadAssemblies (78675ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (924ms)
-			TypeCache.Refresh (106ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (766ms)
-			ResolveRequiredComponents (38ms)
-	FinalizeReload (29384ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (26653ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (3442ms)
-			BeforeProcessingInitializeOnLoad (9640ms)
-			ProcessInitializeOnLoadAttributes (9403ms)
-			ProcessInitializeOnLoadMethodAttributes (4154ms)
-			AfterProcessingInitializeOnLoad (3ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (34ms)
-Refreshing native plugins compatible for Editor in 84.34 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (10.7 MB). Loaded Objects now: 8567.
-Memory consumption went from 192.8 MB to 182.1 MB.
-Total: 228.164400 ms (FindLiveObjects: 4.630200 ms CreateObjectMapping: 7.014400 ms MarkObjects: 193.648600 ms  DeleteObjects: 22.868300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in 12.588 seconds
-Refreshing native plugins compatible for Editor in 7.97 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  8.862 seconds
-Domain Reload Profiling: 21463ms
-	BeginReloadAssembly (2803ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (17ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (2247ms)
-	RebuildCommonClasses (141ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (54ms)
-	LoadAllAssembliesAndSetupDomain (9581ms)
-		LoadAssemblies (9360ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (619ms)
-			TypeCache.Refresh (43ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (485ms)
-			ResolveRequiredComponents (77ms)
-	FinalizeReload (8863ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (7906ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (922ms)
-			BeforeProcessingInitializeOnLoad (2718ms)
-			ProcessInitializeOnLoadAttributes (2926ms)
-			ProcessInitializeOnLoadMethodAttributes (1329ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (68ms)
-Refreshing native plugins compatible for Editor in 6.51 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (4.8 MB). Loaded Objects now: 8569.
-Memory consumption went from 194.7 MB to 189.9 MB.
-Total: 1931.313200 ms (FindLiveObjects: 3.072900 ms CreateObjectMapping: 4.195600 ms MarkObjects: 1911.463600 ms  DeleteObjects: 12.579000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 709.385184 seconds.
-  path: Assets/OpenYandere
-  artifactKey: Guid(d58ab19043220204f92067d240b311bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere using Guid(d58ab19043220204f92067d240b311bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0dedd70c298f05f03973ed3a645e30c6') in 0.0124353 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.667340 seconds.
-  path: Assets/OpenYandere/Sounds
-  artifactKey: Guid(33ade71cb92579449a084629423c0463) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds using Guid(33ade71cb92579449a084629423c0463) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ce974de6be61eaba8cbe626c7b13ee86') in 0.0010768 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.112215 seconds.
-  path: Assets/OpenYandere/Sounds/202914__adrian_gomar__fountain03.wav
-  artifactKey: Guid(81c3be679c1d7754eac5bbf39c24cc58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/202914__adrian_gomar__fountain03.wav using Guid(81c3be679c1d7754eac5bbf39c24cc58) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd7c4cd800d68d9976798985d285b561') in 0.749515 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.913071 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 7.82 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: 'd04eb69f636a55dc00d764c0936d841c') in 0.0146506 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.765400 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 7.07 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: '89faea71ad5a6165058ff08c75554e1c') in 0.0099218 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.785007 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 22.18 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: 'ebdaf8f0496fcccef63fb513d6a78746') in 0.0253982 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.422291 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 17.77 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: '605c96a5cea42b8fa6db27f541ee15d0') in 0.0232548 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.377144 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 7.89 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: '3351f51d8491cfbd27aa4b9bb7d7ce1a') in 0.0131675 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.232704 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 7.62 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: '43091dfee0a43801a73b2d442c8819b7') in 0.0123591 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.873808 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 32.24 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: 'e0087141689df7f1a6e4355a7e02c34e') in 0.0415992 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.354266 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 13.49 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: 'b16b7c49dfe196882922b0a20d163ecf') in 0.0290441 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.352999 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 7.72 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: '25be5c420b6844e35e2ca7a4537f0e31') in 0.0109606 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.273373 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 8.31 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: 'f9aae56909b606787c081d241dda9fda') in 0.012732 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.018592 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 5.72 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: '53bb96b4ffe341b78dcc524729ff8f05') in 0.0091424 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.120946 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 6.34 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: '7f9fc1d987caeb3a8ae30f06f4574ff4') in 0.0100575 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.929601 seconds.
-  path: Assets/OpenYandere/Sounds/NewAudioMixer.mixer
-  artifactKey: Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Sounds/NewAudioMixer.mixer using Guid(38466596fecf76c4e88ac7411ab38f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 5.74 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
- -> (artifact id: '67093da7e5b7dd9014040fe6b4246dbf') in 0.0084425 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  3.029 seconds
-Refreshing native plugins compatible for Editor in 6.20 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in 17.825 seconds
-Domain Reload Profiling: 20861ms
-	BeginReloadAssembly (709ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (45ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (239ms)
-	RebuildCommonClasses (100ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (2163ms)
-		LoadAssemblies (2099ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (386ms)
-			TypeCache.Refresh (23ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (330ms)
-			ResolveRequiredComponents (23ms)
-	FinalizeReload (17827ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (16119ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (959ms)
-			BeforeProcessingInitializeOnLoad (5023ms)
-			ProcessInitializeOnLoadAttributes (7939ms)
-			ProcessInitializeOnLoadMethodAttributes (2185ms)
-			AfterProcessingInitializeOnLoad (3ms)
-			EditorAssembliesLoaded (2ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (250ms)
-Refreshing native plugins compatible for Editor in 30.13 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (10.7 MB). Loaded Objects now: 8578.
-Memory consumption went from 196.4 MB to 185.6 MB.
-Total: 780.177000 ms (FindLiveObjects: 196.662400 ms CreateObjectMapping: 202.839200 ms MarkObjects: 358.751400 ms  DeleteObjects: 21.921000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in 23.294 seconds
-Refreshing native plugins compatible for Editor in 6.16 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  9.635 seconds
-Domain Reload Profiling: 32938ms
-	BeginReloadAssembly (2932ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (18ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (2031ms)
-	RebuildCommonClasses (76ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (20215ms)
-		LoadAssemblies (20399ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (525ms)
-			TypeCache.Refresh (53ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (437ms)
-			ResolveRequiredComponents (28ms)
-	FinalizeReload (9636ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (7734ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (666ms)
-			BeforeProcessingInitializeOnLoad (2751ms)
-			ProcessInitializeOnLoadAttributes (3292ms)
-			ProcessInitializeOnLoadMethodAttributes (1018ms)
-			AfterProcessingInitializeOnLoad (3ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (48ms)
-Refreshing native plugins compatible for Editor in 26.22 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (10.7 MB). Loaded Objects now: 8580.
-Memory consumption went from 200.3 MB to 189.6 MB.
-Total: 99.694700 ms (FindLiveObjects: 2.678700 ms CreateObjectMapping: 6.445000 ms MarkObjects: 73.962400 ms  DeleteObjects: 16.606200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 6.75 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7774 unused Assets / (8.2 MB). Loaded Objects now: 8580.
-Memory consumption went from 200.1 MB to 191.9 MB.
-Total: 1755.251500 ms (FindLiveObjects: 2.005500 ms CreateObjectMapping: 3.126600 ms MarkObjects: 1721.433400 ms  DeleteObjects: 28.683600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in 66.649 seconds
-Refreshing native plugins compatible for Editor in 17.67 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in 100.571 seconds
-Domain Reload Profiling: 167230ms
-	BeginReloadAssembly (4778ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1022ms)
-	RebuildCommonClasses (289ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (61530ms)
-		LoadAssemblies (63316ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1668ms)
-			TypeCache.Refresh (140ms)
-				TypeCache.ScanAssembly (9ms)
-			BuildScriptInfoCaches (1415ms)
-			ResolveRequiredComponents (93ms)
-	FinalizeReload (100572ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (97721ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (34ms)
-			SetLoadedEditorAssemblies (17409ms)
-			BeforeProcessingInitializeOnLoad (76048ms)
-			ProcessInitializeOnLoadAttributes (3666ms)
-			ProcessInitializeOnLoadMethodAttributes (561ms)
-			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (36ms)
-Refreshing native plugins compatible for Editor in 15.56 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (4.8 MB). Loaded Objects now: 8582.
-Memory consumption went from 202.1 MB to 197.3 MB.
-Total: 9254.121300 ms (FindLiveObjects: 8.442900 ms CreateObjectMapping: 12.100300 ms MarkObjects: 9155.514000 ms  DeleteObjects: 78.061600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in 31.854 seconds
-Refreshing native plugins compatible for Editor in 7.35 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  7.219 seconds
-Domain Reload Profiling: 39086ms
-	BeginReloadAssembly (24068ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (1ms)
-		CreateAndSetChildDomain (977ms)
-	RebuildCommonClasses (98ms)
-	RebuildNativeTypeToScriptingClass (29ms)
-	initialDomainReloadingComplete (940ms)
-	LoadAllAssembliesAndSetupDomain (6733ms)
-		LoadAssemblies (16396ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1274ms)
-			TypeCache.Refresh (67ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (1154ms)
-			ResolveRequiredComponents (37ms)
-	FinalizeReload (7220ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (3976ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (16ms)
-			BeforeProcessingInitializeOnLoad (1714ms)
-			ProcessInitializeOnLoadAttributes (1338ms)
-			ProcessInitializeOnLoadMethodAttributes (893ms)
-			AfterProcessingInitializeOnLoad (10ms)
-			EditorAssembliesLoaded (2ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (2722ms)
-Refreshing native plugins compatible for Editor in 10.88 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (12.9 MB). Loaded Objects now: 8584.
-Memory consumption went from 204.1 MB to 191.1 MB.
-Total: 626.504400 ms (FindLiveObjects: 6.530000 ms CreateObjectMapping: 11.707200 ms MarkObjects: 524.443800 ms  DeleteObjects: 83.820200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 38.69 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7774 unused Assets / (5.0 MB). Loaded Objects now: 8584.
-Memory consumption went from 204.0 MB to 199.0 MB.
-Total: 9123.065000 ms (FindLiveObjects: 39.536000 ms CreateObjectMapping: 45.622000 ms MarkObjects: 8955.506800 ms  DeleteObjects: 82.397700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 8.29 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7774 unused Assets / (5.0 MB). Loaded Objects now: 8584.
-Memory consumption went from 204.0 MB to 199.0 MB.
-Total: 56.315900 ms (FindLiveObjects: 2.293600 ms CreateObjectMapping: 8.287300 ms MarkObjects: 35.884100 ms  DeleteObjects: 9.847700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 39.58 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7774 unused Assets / (4.9 MB). Loaded Objects now: 8584.
-Memory consumption went from 203.9 MB to 199.0 MB.
-Total: 65.175800 ms (FindLiveObjects: 4.477200 ms CreateObjectMapping: 4.005000 ms MarkObjects: 42.339000 ms  DeleteObjects: 14.351900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.838 seconds
-Refreshing native plugins compatible for Editor in 4.13 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.943 seconds
-Domain Reload Profiling: 1785ms
-	BeginReloadAssembly (247ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (65ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (512ms)
-		LoadAssemblies (421ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (212ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (182ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (944ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (706ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (76ms)
-			ProcessInitializeOnLoadAttributes (427ms)
-			ProcessInitializeOnLoadMethodAttributes (192ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (22ms)
-Refreshing native plugins compatible for Editor in 5.39 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (9.7 MB). Loaded Objects now: 8586.
-Memory consumption went from 206.0 MB to 196.3 MB.
-Total: 34.119500 ms (FindLiveObjects: 1.723500 ms CreateObjectMapping: 2.849900 ms MarkObjects: 19.433600 ms  DeleteObjects: 10.110200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.762 seconds
-Refreshing native plugins compatible for Editor in 3.94 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.945 seconds
-Domain Reload Profiling: 1711ms
-	BeginReloadAssembly (215ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (54ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (23ms)
-	LoadAllAssembliesAndSetupDomain (478ms)
-		LoadAssemblies (378ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (214ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (181ms)
-			ResolveRequiredComponents (17ms)
-	FinalizeReload (946ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (708ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (76ms)
-			ProcessInitializeOnLoadAttributes (421ms)
-			ProcessInitializeOnLoadMethodAttributes (200ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (24ms)
-Refreshing native plugins compatible for Editor in 6.25 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (8.8 MB). Loaded Objects now: 8588.
-Memory consumption went from 208.0 MB to 199.2 MB.
-Total: 24.182600 ms (FindLiveObjects: 1.270500 ms CreateObjectMapping: 2.453600 ms MarkObjects: 11.557400 ms  DeleteObjects: 8.898900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 2175.977469 seconds.
-  path: Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
-  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd12aa0cc43ab367060eea36fb33c8da1') in 0.5466988 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Plugins/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph
-  artifactKey: Guid(ca2ed216f98028c4dae6c5224a952b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph using Guid(ca2ed216f98028c4dae6c5224a952b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9f198d4e03329e6258893df636789bd1') in 0.0236038 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/OpenYandere/Graphics/Shaders/VolumetricGlowShader.shadergraph
-  artifactKey: Guid(21f187041e425e64ca6d6e6c9993673d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Graphics/Shaders/VolumetricGlowShader.shadergraph using Guid(21f187041e425e64ca6d6e6c9993673d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '073a65523d9d507296f542d39954c221') in 0.5615583 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Plugins/StylizedSkybox/Shaders/Stylized Skybox.shadergraph
-  artifactKey: Guid(c3283e2dd10b6ad4c961c8e6a50ea7c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/StylizedSkybox/Shaders/Stylized Skybox.shadergraph using Guid(c3283e2dd10b6ad4c961c8e6a50ea7c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd7b8af7e373948b6727bc8f10f1bed50') in 0.016033 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 26
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/OpenYandere/Models/stylized-fountain/Material.001.mat
-  artifactKey: Guid(54ad944c717d2eb409b32b53c51bebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/stylized-fountain/Material.001.mat using Guid(54ad944c717d2eb409b32b53c51bebf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9b39aea628b1b4ed81ad40af374f7d09') in 0.8211797 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 26
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Plugins/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph
-  artifactKey: Guid(f63d574838ccfb44f84acc05fed0af48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph using Guid(f63d574838ccfb44f84acc05fed0af48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e6084459bac3f608b5739bb1db5bd52') in 0.0111781 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.259638 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_h_c.mat
-  artifactKey: Guid(6176e832d07848d409786efbad4bd363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_h_c.mat using Guid(6176e832d07848d409786efbad4bd363) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ff6ad8f74670d0b3c8f5248768ee3b8b') in 0.0229102 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_m_s.mat
-  artifactKey: Guid(a5d9676873a89394eae94f91aa75bd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_m_s.mat using Guid(a5d9676873a89394eae94f91aa75bd16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '84a9fe794eb3042b0380eaedde2457c7') in 0.0195107 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_m_c.mat
-  artifactKey: Guid(3ee0346c20550b44cb15faa2951857f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_m_c.mat using Guid(3ee0346c20550b44cb15faa2951857f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1659749ee8de9c83f5ee64d096c6396') in 0.0141724 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_l_c.mat
-  artifactKey: Guid(37ec75cd682a88048a6741c1f8606439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_l_c.mat using Guid(37ec75cd682a88048a6741c1f8606439) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a0235676f4112c1bca71216e6b53d133') in 0.0189202 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_h_s.mat
-  artifactKey: Guid(8b295e28b7200eb4d9ef764e7979c234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_h_s.mat using Guid(8b295e28b7200eb4d9ef764e7979c234) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'daa09cdc586b5e1c0e8ec347975634f5') in 0.0142898 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_l_s.mat
-  artifactKey: Guid(7f0fb9c6a31c0c74daf647a40408a12c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_apron_00_l_s.mat using Guid(7f0fb9c6a31c0c74daf647a40408a12c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67ddc3fe4df6b3fbb886984793909550') in 0.0134346 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.245509 seconds.
-  path: Assets/OpenYandere/Fonts/Arial/Arial Bold SDF.asset
-  artifactKey: Guid(8af49e9631db1f748bbc81fad6f889e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Fonts/Arial/Arial Bold SDF.asset using Guid(8af49e9631db1f748bbc81fad6f889e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '223b03ef54df61b470471cff17c58389') in 0.055057 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 26
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_01_l_s.mat
-  artifactKey: Guid(2bdf0b51019350940b1dda9d31d9b187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_01_l_s.mat using Guid(2bdf0b51019350940b1dda9d31d9b187) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '257ab886767e9401df3d35d63fdf192e') in 0.0301942 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_00_l_s.mat
-  artifactKey: Guid(b96b208a8cf6bd24ba81deb164a11e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_00_l_s.mat using Guid(b96b208a8cf6bd24ba81deb164a11e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3261fc371697964cf3be2dd6c3e8f7ac') in 0.0182951 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_00_m_c.mat
-  artifactKey: Guid(2aadc799f3b12ff46aff701b1adbafad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_00_m_c.mat using Guid(2aadc799f3b12ff46aff701b1adbafad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aeb01eae90e6e2c3cfe8d6a01ce85f90') in 0.0139622 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_01_l_c.mat
-  artifactKey: Guid(030a65e90d2f7074b8c704456acc401a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_01_l_c.mat using Guid(030a65e90d2f7074b8c704456acc401a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b8bbc5b638bc4b10ea8664c8161981b') in 0.0188909 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_00_h_s.mat
-  artifactKey: Guid(576e4d5c52d2ff04c879b117621d13b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_bathtowel_00_h_s.mat using Guid(576e4d5c52d2ff04c879b117621d13b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fd813c2ec85506e6bbc7434490885fb2') in 0.0136115 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.617924 seconds.
-  path: Assets/Plugins/Scalable Grid Prototype Materials/Materials/Blue_Prototype.mat
-  artifactKey: Guid(5a7ca585a9b2b3c4587125916713263d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Scalable Grid Prototype Materials/Materials/Blue_Prototype.mat using Guid(5a7ca585a9b2b3c4587125916713263d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '76e993765a57c916dd040f92696fd13e') in 1.6188599 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Plugins/Scalable Grid Prototype Materials/Materials/Gray_Prototype.mat
-  artifactKey: Guid(21ca8723c11d2d34abf1e9e595b0942a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Scalable Grid Prototype Materials/Materials/Gray_Prototype.mat using Guid(21ca8723c11d2d34abf1e9e595b0942a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cb6a7935272c8596d78bdd10d7ab6bb7') in 0.0348441 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Plugins/Scalable Grid Prototype Materials/Materials/Mantis_Prototype.mat
-  artifactKey: Guid(720ea100b5a5ea741a0e79cfb3ab65c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Scalable Grid Prototype Materials/Materials/Mantis_Prototype.mat using Guid(720ea100b5a5ea741a0e79cfb3ab65c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5cd6291571a2b0a3b8fd7137c1dc941a') in 0.0229235 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Plugins/Scalable Grid Prototype Materials/Materials/Light_Sea_Green_Prototype.mat
-  artifactKey: Guid(40598ecf603ac4d41b1f525da75d9d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Scalable Grid Prototype Materials/Materials/Light_Sea_Green_Prototype.mat using Guid(40598ecf603ac4d41b1f525da75d9d89) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc040d27e3c43d825c4d2734e07f98c1') in 0.0635233 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Plugins/Scalable Grid Prototype Materials/Materials/White_Prototype.mat
-  artifactKey: Guid(81caf0b4f4d2ac74e847cad8de1aa792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Scalable Grid Prototype Materials/Materials/White_Prototype.mat using Guid(81caf0b4f4d2ac74e847cad8de1aa792) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f794aac026ae79cabebd1a6513d236b8') in 0.0314853 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Plugins/Scalable Grid Prototype Materials/Materials/Light_Gray_Prototype.mat
-  artifactKey: Guid(848390390ab9d3740bfc096a1bdda56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Scalable Grid Prototype Materials/Materials/Light_Gray_Prototype.mat using Guid(848390390ab9d3740bfc096a1bdda56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0bf263451400baead823bb5fd899a41d') in 0.0333839 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Plugins/Scalable Grid Prototype Materials/Materials/Violet_Prototype.mat
-  artifactKey: Guid(7ec4e7373ac023f42bc829945cdcdf38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Scalable Grid Prototype Materials/Materials/Violet_Prototype.mat using Guid(7ec4e7373ac023f42bc829945cdcdf38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3813c8755d4617f88eb74a56880ac3c9') in 0.0250947 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 30
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.340662 seconds.
-  path: Assets/Plugins/Scalable Grid Prototype Materials/Materials/Ground/DarkGray_Ground_Prototype.mat
-  artifactKey: Guid(a459023871c8b4241b88c51d8ab759d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Scalable Grid Prototype Materials/Materials/Ground/DarkGray_Ground_Prototype.mat using Guid(a459023871c8b4241b88c51d8ab759d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd08e6dba1283ecd616b2eaeaac3f3916') in 0.0172861 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 32
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.977 seconds
-Refreshing native plugins compatible for Editor in 3.92 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.058 seconds
-Domain Reload Profiling: 2038ms
-	BeginReloadAssembly (297ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (17ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (75ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (24ms)
-	LoadAllAssembliesAndSetupDomain (608ms)
-		LoadAssemblies (538ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (232ms)
-			TypeCache.Refresh (14ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (197ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (1058ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (796ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (90ms)
-			ProcessInitializeOnLoadAttributes (461ms)
-			ProcessInitializeOnLoadMethodAttributes (233ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (24ms)
-Refreshing native plugins compatible for Editor in 6.14 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 39 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (9.1 MB). Loaded Objects now: 8649.
-Memory consumption went from 212.0 MB to 202.9 MB.
-Total: 25.233000 ms (FindLiveObjects: 1.459200 ms CreateObjectMapping: 2.350300 ms MarkObjects: 13.778200 ms  DeleteObjects: 7.644000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 6.92 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7774 unused Assets / (8.8 MB). Loaded Objects now: 8649.
-Memory consumption went from 211.1 MB to 202.3 MB.
-Total: 31.841500 ms (FindLiveObjects: 1.443100 ms CreateObjectMapping: 2.974100 ms MarkObjects: 17.353300 ms  DeleteObjects: 10.069500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.795 seconds
-Refreshing native plugins compatible for Editor in 3.90 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.983 seconds
-Domain Reload Profiling: 1783ms
-	BeginReloadAssembly (229ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (53ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (24ms)
-	LoadAllAssembliesAndSetupDomain (497ms)
-		LoadAssemblies (402ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (218ms)
-			TypeCache.Refresh (15ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (181ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (983ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (731ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (77ms)
-			ProcessInitializeOnLoadAttributes (440ms)
-			ProcessInitializeOnLoadMethodAttributes (202ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (22ms)
-Refreshing native plugins compatible for Editor in 6.44 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (9.1 MB). Loaded Objects now: 8651.
-Memory consumption went from 213.2 MB to 204.1 MB.
-Total: 30.443900 ms (FindLiveObjects: 1.831900 ms CreateObjectMapping: 2.608300 ms MarkObjects: 17.683700 ms  DeleteObjects: 8.317500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.768 seconds
-Refreshing native plugins compatible for Editor in 3.95 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.953 seconds
-Domain Reload Profiling: 1725ms
-	BeginReloadAssembly (214ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (51ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (24ms)
-	LoadAllAssembliesAndSetupDomain (485ms)
-		LoadAssemblies (380ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (218ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (184ms)
-			ResolveRequiredComponents (20ms)
-	FinalizeReload (954ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (706ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (76ms)
-			ProcessInitializeOnLoadAttributes (421ms)
-			ProcessInitializeOnLoadMethodAttributes (199ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (23ms)
-Refreshing native plugins compatible for Editor in 6.71 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (9.5 MB). Loaded Objects now: 8653.
-Memory consumption went from 215.0 MB to 205.5 MB.
-Total: 31.436100 ms (FindLiveObjects: 1.779000 ms CreateObjectMapping: 3.021500 ms MarkObjects: 17.658400 ms  DeleteObjects: 8.975500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.786 seconds
-Refreshing native plugins compatible for Editor in 3.90 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-[MODES] ModeService[none].Initialize
-[MODES] ModeService[none].LoadModes
-[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.003 seconds
-Domain Reload Profiling: 1792ms
-	BeginReloadAssembly (217ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (54ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (23ms)
-	LoadAllAssembliesAndSetupDomain (501ms)
-		LoadAssemblies (400ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (212ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (185ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1003ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (759ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (82ms)
-			ProcessInitializeOnLoadAttributes (458ms)
-			ProcessInitializeOnLoadMethodAttributes (209ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (22ms)
-Refreshing native plugins compatible for Editor in 6.59 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (8.4 MB). Loaded Objects now: 8655.
-Memory consumption went from 217.0 MB to 208.6 MB.
-Total: 31.327000 ms (FindLiveObjects: 2.119700 ms CreateObjectMapping: 3.459700 ms MarkObjects: 18.353500 ms  DeleteObjects: 7.392300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 99.536860 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_swimwear_30_m_c.mat
-  artifactKey: Guid(dde5b10b034282c49a71869c789b2b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_swimwear_30_m_c.mat using Guid(dde5b10b034282c49a71869c789b2b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '616250f04c72cb0148dc3a0646d0c49e') in 0.3982131 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/OpenYandere/Fonts/Futura/Futura Condensed Medium.ttf
-  artifactKey: Guid(4fa098261d8d23748a0927c9c9126b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Fonts/Futura/Futura Condensed Medium.ttf using Guid(4fa098261d8d23748a0927c9c9126b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ec5e297131e45e984ce5c3c8054967ca') in 0.0285057 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 25
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Plugins/TextMesh Pro/Fonts/LiberationSans.ttf
-  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8586703eff8a7776b5b917fce7133b64') in 0.0153634 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 25
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/OpenYandere/Fonts/Arial/Arial Bold.ttf
-  artifactKey: Guid(e630ca13f210f154c93c5d81b2b5491c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Fonts/Arial/Arial Bold.ttf using Guid(e630ca13f210f154c93c5d81b2b5491c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c4e3b232c160bf3c66bbbda928fc902') in 0.0178276 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 25
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_uniform_00_h_c.mat
-  artifactKey: Guid(e72bb7b0467ba2846ba7dae232fbec24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_uniform_00_h_c.mat using Guid(e72bb7b0467ba2846ba7dae232fbec24) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ea3a573d6cadb8328af1ca18f131326b') in 0.0206488 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/OpenYandere/Fonts/Arial/Arial.ttf
-  artifactKey: Guid(425d8552df74a7b47a393eefeb1f477e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Fonts/Arial/Arial.ttf using Guid(425d8552df74a7b47a393eefeb1f477e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b7fa77d0246e264f81a035a07382caa') in 0.0168455 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 25
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_uniform_00_l_c.mat
-  artifactKey: Guid(211f2a16e32cc0b4abe3d92841e40563) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OpenYandere/Models/Characters/Aoi/_Materials/f02_uniform_00_l_c.mat using Guid(211f2a16e32cc0b4abe3d92841e40563) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e4dd59e7cad11daf6cc885da27b8267e') in 0.0122552 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Unity Projects\OpenYandere\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.903 seconds
-Refreshing native plugins compatible for Editor in 4.01 ms, found 8 plugins.
-Native extension for WindowsStandalone target not found
-Error loading file Library/StateCache/LayerSettings/9e/9ecc5c3c162a7aba29bafa64c8b94b7c.json. Error: System.IO.IOException: Sharing violation on path D:\Unity Projects\OpenYandere\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
+Error saving file Library/StateCache/LayerSettings/9e/9ecc5c3c162a7aba29bafa64c8b94b7c.json. Error: System.IO.IOException: Sharing violation on path D:\Unity Projects\OpenYandere\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
   at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
-  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00055] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
-  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks) [0x00000] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string,System.Text.Encoding,bool)
-  at System.IO.File.InternalReadAllText (System.String path, System.Text.Encoding encoding) [0x00000] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
-  at System.IO.File.ReadAllText (System.String path, System.Text.Encoding encoding) [0x00034] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
-  at UnityEditor.StateCache`1[T].GetState (UnityEngine.Hash128 key, T defaultValue) [0x00041] in <8f5ff83e453e49179847370b820a0398>:0 
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) [0x00055] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding) [0x00000] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool,System.Text.Encoding)
+  at System.IO.File.WriteAllText (System.String path, System.String contents, System.Text.Encoding encoding) [0x00034] in <ecf276dcb8654fa5bed2c5ea1a4ad870>:0 
+  at UnityEditor.StateCache`1[T].SetState (UnityEngine.Hash128 key, T obj) [0x0004b] in <8f5ff83e453e49179847370b820a0398>:0 
 UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
 UnityEngine.Debug:LogError (object)
-UnityEditor.StateCache`1<UnityEditor.Tools/LayerSettings>:GetState (UnityEngine.Hash128,UnityEditor.Tools/LayerSettings)
+UnityEditor.StateCache`1<UnityEditor.Tools/LayerSettings>:SetState (UnityEngine.Hash128,UnityEditor.Tools/LayerSettings)
+UnityEditor.Tools:set_lockedLayers (int)
 UnityEditor.Tools:OnEnable ()
 UnityEngine.ScriptableObject:CreateScriptableObjectInstanceFromType (System.Type,bool)
 UnityEngine.ScriptableObject:CreateInstance (System.Type)
@@ -1395,49 +162,70 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [MODES] ModeService[none].Initialize
 [MODES] ModeService[none].LoadModes
 [MODES] Loading mode Default (0) for mode-current-id-OpenYandere
+Refreshing native plugins compatible for Editor in 5.38 ms, found 8 plugins.
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.086 seconds
-Domain Reload Profiling: 1992ms
-	BeginReloadAssembly (278ms)
+- Finished resetting the current domain, in  1.548 seconds
+Domain Reload Profiling: 2987ms
+	BeginReloadAssembly (521ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (74ms)
-	RebuildCommonClasses (40ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (549ms)
-		LoadAssemblies (474ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (808ms)
+		LoadAssemblies (588ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (220ms)
-			TypeCache.Refresh (10ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (193ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1086ms)
+		AnalyzeDomain (378ms)
+			TypeCache.Refresh (292ms)
+				TypeCache.ScanAssembly (258ms)
+			BuildScriptInfoCaches (63ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1549ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (812ms)
+		SetupLoadedEditorAssemblies (1222ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (84ms)
-			ProcessInitializeOnLoadAttributes (453ms)
-			ProcessInitializeOnLoadMethodAttributes (263ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (99ms)
+			ProcessInitializeOnLoadAttributes (824ms)
+			ProcessInitializeOnLoadMethodAttributes (283ms)
 			AfterProcessingInitializeOnLoad (2ms)
-			EditorAssembliesLoaded (1ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (32ms)
-Refreshing native plugins compatible for Editor in 7.30 ms, found 8 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 5.77 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 36 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7820 unused Assets / (9.3 MB). Loaded Objects now: 8680.
-Memory consumption went from 219.1 MB to 209.8 MB.
-Total: 30.264700 ms (FindLiveObjects: 1.697500 ms CreateObjectMapping: 2.513200 ms MarkObjects: 17.780700 ms  DeleteObjects: 8.271800 ms)
+Unloading 273 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7826 unused Assets / (9.6 MB). Loaded Objects now: 8562.
+Memory consumption went from 221.3 MB to 211.7 MB.
+Total: 28.556500 ms (FindLiveObjects: 1.676700 ms CreateObjectMapping: 2.853500 ms MarkObjects: 15.348900 ms  DeleteObjects: 8.674800 ms)
 
-Prepare: number of updated asset objects reloaded= 0
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+========================================================================
+Received Import Request.
+  Time since last request: 13808.079698 seconds.
+  path: Assets/OpenYandere/Scenes/School/School
+  artifactKey: Guid(e479476d3c4a83b4f819c40f03ed363e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Scenes/School/School using Guid(e479476d3c4a83b4f819c40f03ed363e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '91ea5bdb45d099615da658957122cb5b') in 0.0083093 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.105003 seconds.
+  path: Assets/OpenYandere/Scenes/School/School/LightingData.asset
+  artifactKey: Guid(d7c17f686547eed4ca11cb5d7118b7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Scenes/School/School/LightingData.asset using Guid(d7c17f686547eed4ca11cb5d7118b7b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '53d5e0d461ce90f773b3ecae41db4f9e') in 0.0305682 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/OpenYandere/Scenes/School/School/ReflectionProbe-0.exr
+  artifactKey: Guid(f4310072a9a1e7e469cf87162c853e0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Scenes/School/School/ReflectionProbe-0.exr using Guid(f4310072a9a1e7e469cf87162c853e0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f96ca1433ffb3f98a8c3206e78d4e3f1') in 0.4508648 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
