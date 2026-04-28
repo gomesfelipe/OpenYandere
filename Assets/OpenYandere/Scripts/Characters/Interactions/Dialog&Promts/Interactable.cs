@@ -26,7 +26,6 @@ namespace OpenYandere.Characters.Interactions
 
         protected virtual void Awake()
         {
-            originalIKTargetPosition = headIKTarget.position;
             _uiManager = GameManager.Instance.UIManager;
             _playerManager = GameManager.Instance.PlayerManager;
             if (headIKTarget != null)

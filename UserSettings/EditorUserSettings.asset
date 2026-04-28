@@ -12,10 +12,10 @@ EditorUserSettings:
       value: 5708015753535a03595d5a7a4020074413161c7979707069797a4866b7b66c6b
       flags: 0
     RecentlyUsedSceneGuid-2:
-      value: 00050c0255545e0f585b592011215944154f1a7a2e2b7e3228284c63e1e43268
+      value: 5308505201000c020e580f2715700c44424f1c7c7f717160792d4c62b0e2673c
       flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 5308505201000c020e580f2715700c44424f1c7c7f717160792d4c62b0e2673c
+      value: 00050c0255545e0f585b592011215944154f1a7a2e2b7e3228284c63e1e43268
       flags: 0
     UnityEditor.ShaderGraph.Blackboard:
       value: 18135939215a0a5004000b0e15254b524c030a3f2964643d120d1230e9e93a3fd6e826abbd3c3e302a07a37e0901373ae01e0008f707250d171df81a53a542435f95548717f73713d91006c1c309d0effad0d2f9ddffa5828f8beea0a6a2bcaaa7a2f7a3fbf0aa90f9f9b2f3a2fdf4cddbcff59ed784d185e080818bf0839e91c094df8289d7968bc490
@@ -49,5 +49,5 @@ EditorUserSettings:
   m_VCHierarchyOverlayIcons: 1
   m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 1
+  m_VCScanLocalPackagesOnConnect: 1
   m_ArtifactGarbageCollection: 1
-  m_CompressAssetsOnImport: 1

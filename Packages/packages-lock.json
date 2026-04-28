@@ -13,15 +13,6 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.2d.tilemap": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.modules.tilemap": "1.0.0",
-        "com.unity.modules.uielements": "1.0.0"
-      }
-    },
     "com.unity.ads": {
       "version": "4.4.2",
       "depth": 0,
@@ -71,7 +62,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.3.1",
+      "version": "2.7.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -332,7 +323,7 @@
       }
     },
     "com.unity.vectorgraphics": {
-      "version": "2.0.0-preview.24",
+      "version": "2.0.0-preview.25",
       "depth": 0,
       "source": "registry",
       "dependencies": {

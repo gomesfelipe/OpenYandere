@@ -423,3 +423,393 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:scripting/monoscript/fileName/ControlRigBuilder.cs: 2a565c5a1b2ecd926805b50ad9e8cf63 -> 235a9268baa9393be402e8d42270bb78
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 200.647245 seconds.
+  path: Assets/OpenYandere/Scenes
+  artifactKey: Guid(5a9665293fc6df74389ce2789671dbf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Scenes using Guid(5a9665293fc6df74389ce2789671dbf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '8b49211a6d583a631ffea0cc887c21ad') in 0.001618 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.799855 seconds.
+  path: Assets/OpenYandere/Scenes/School
+  artifactKey: Guid(403e46e769e6d5b47bb2caafb6822684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Scenes/School using Guid(403e46e769e6d5b47bb2caafb6822684) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '35b4b186446f6c99cf8375efa41be3f7') in 0.000440 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.082749 seconds.
+  path: Assets/OpenYandere/Scenes/School/Terrain.asset
+  artifactKey: Guid(ee2cbd8c31581404887b0e14b3c238eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Scenes/School/Terrain.asset using Guid(ee2cbd8c31581404887b0e14b3c238eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '9cfc3faeb037d8465d3e5eb622d9ab23') in 0.044547 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.896179 seconds.
+  path: Assets/OpenYandere/Scenes/School/School.unity
+  artifactKey: Guid(c48d0a74555babf4c8b0bc8bea10cdf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Scenes/School/School.unity using Guid(c48d0a74555babf4c8b0bc8bea10cdf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '1a3095df355732f82377b7fd3e3ae83c') in 0.000596 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.654 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Error saving file Library/StateCache/LayerSettings/9e/9ecc5c3c162a7aba29bafa64c8b94b7c.json. Error: System.IO.IOException: Sharing violation on path D:\Unity Projects\OpenYandere\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) [0x00055] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding) [0x00000] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool,System.Text.Encoding)
+  at System.IO.File.WriteAllText (System.String path, System.String contents, System.Text.Encoding encoding) [0x00034] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at UnityEditor.StateCache`1[T].SetState (UnityEngine.Hash128 key, T obj) [0x0004b] in <4b8f645257c94d1296f440a10c6f388e>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.StateCache`1<UnityEditor.Tools/LayerSettings>:SetState (UnityEngine.Hash128,UnityEditor.Tools/LayerSettings)
+UnityEditor.Tools:set_lockedLayers (int)
+UnityEditor.Tools:OnEnable ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.536 seconds
+Domain Reload Profiling: 2190ms
+	BeginReloadAssembly (216ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (349ms)
+		LoadAssemblies (437ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (35ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (22ms)
+	FinalizeReload (1537ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (643ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (91ms)
+			ProcessInitializeOnLoadAttributes (427ms)
+			ProcessInitializeOnLoadMethodAttributes (100ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (23ms)
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 17.64 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7547 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.6 MB). Loaded Objects now: 8279.
+Memory consumption went from 255.7 MB to 252.2 MB.
+Total: 5.424100 ms (FindLiveObjects: 0.572300 ms CreateObjectMapping: 0.612500 ms MarkObjects: 3.124300 ms  DeleteObjects: 1.114300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-Editor-firstpass: c7dc8b9ced9189e735622608d643d0a1 -> 7eccaaef97e923e17b24bdc37205cdd9
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/Rig_References.cs: fc5b543509ee4b24b5faeeb25b4234ed -> 7c6259e81a2525a3f5c0f366eac4669d
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-Editor: 622903df441c48ce54b1885073d338c9 -> 21224b9a9f70fb7489dc7d0c711663d0
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: e0676223c0f68a9f5983836c065c657d -> 7f112f0726d82ca2d30014ae4cdc5e7a
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-firstpass: 658be8a3643a693e3b59a227aa66cb1f -> 3944727bacc4479225f882d496555dec
+  custom:CustomObjectIndexerAttribute: 3ead1caaecf1c488f20bcfeb224b6af5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/ControlRigBuilder.cs: 2a565c5a1b2ecd926805b50ad9e8cf63 -> 235a9268baa9393be402e8d42270bb78
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 103.627292 seconds.
+  path: Assets/OpenYandere/Prefabs/Player.prefab
+  artifactKey: Guid(a7a8dcd6cf48f5544a9a2216ca3149e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Prefabs/Player.prefab using Guid(a7a8dcd6cf48f5544a9a2216ca3149e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '8b0cd4a6f1545ad729e36be00afe9435') in 0.380618 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 823
+========================================================================
+Received Import Request.
+  Time since last request: 0.625674 seconds.
+  path: Assets/OpenYandere/Models/KitchenKnife.fbx
+  artifactKey: Guid(fd35859431cdca94495152e154dfc668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Models/KitchenKnife.fbx using Guid(fd35859431cdca94495152e154dfc668) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '636443737b7ee8736b79fd4574cdf456') in 0.933223 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/OpenYandere/Models/Shovel.fbx
+  artifactKey: Guid(0512f5f82560fc84fbebd6bca9893e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Models/Shovel.fbx using Guid(0512f5f82560fc84fbebd6bca9893e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'bb33fc08ea503c63cae93a1ccda01a5c') in 0.029282 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/OpenYandere/Models/security_camera.fbx
+  artifactKey: Guid(f4b973b8305d31742b861507a0562c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Models/security_camera.fbx using Guid(f4b973b8305d31742b861507a0562c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '3cce2edb152aef1df63e9cf2556800cf') in 0.032758 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 3.472517 seconds.
+  path: Assets/OpenYandere/Models/stylized-fountain/fountain.fbx
+  artifactKey: Guid(55200a896c2011142841fa94ea6fbed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Models/stylized-fountain/fountain.fbx using Guid(55200a896c2011142841fa94ea6fbed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: 'b5fac33df59add6b19792185e927e41f') in 0.638154 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 1.512381 seconds.
+  path: Assets/OpenYandere/Fonts/Damion-Regular Pink SDF Material.mat
+  artifactKey: Guid(df1daa352300c4ec29b696fff804c547) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Fonts/Damion-Regular Pink SDF Material.mat using Guid(df1daa352300c4ec29b696fff804c547) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '1f8dd821ba716b5589e74eaa9d7f37ea') in 0.020626 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.006781 seconds.
+  path: Assets/OpenYandere/Fonts/Kanit-ExtraBoldItalic White Outline SDF Material.mat
+  artifactKey: Guid(fe2063bb7c1a09f4cab50e6a0597dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Fonts/Kanit-ExtraBoldItalic White Outline SDF Material.mat using Guid(fe2063bb7c1a09f4cab50e6a0597dfc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '9edad73f33dcda741a7330648ff46231') in 0.054079 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/OpenYandere/Fonts/Kanit-ExtraBoldItalic White SDF Material.mat
+  artifactKey: Guid(e18c138fa96898943a9478ad15dc8fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Fonts/Kanit-ExtraBoldItalic White SDF Material.mat using Guid(e18c138fa96898943a9478ad15dc8fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '3c6bbe31349e7f61f85ddefd1b0c8e93') in 0.054718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/OpenYandere/Fonts/Kanit-ExtraBoldItalic SDF.asset
+  artifactKey: Guid(216c7f2ea0590224793b212bfb152315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OpenYandere/Fonts/Kanit-ExtraBoldItalic SDF.asset using Guid(216c7f2ea0590224793b212bfb152315) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '07a8f84d6b931ac7e52848493292d881') in 0.075717 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 3.053701 seconds.
+  path: Assets/Plugins/StylizedSkybox/Lava PP.asset
+  artifactKey: Guid(3505a8ef1f7ded04aaae472605af7b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/StylizedSkybox/Lava PP.asset using Guid(3505a8ef1f7ded04aaae472605af7b21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 20 workers.
+ -> (artifact id: '137d7d29d65eb7d30e7a8f4a3a681d89') in 0.002992 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.780 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-OpenYandere
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Error saving file Library/StateCache/LayerSettings/9e/9ecc5c3c162a7aba29bafa64c8b94b7c.json. Error: System.IO.IOException: Sharing violation on path D:\Unity Projects\OpenYandere\Library\StateCache\LayerSettings\9e\9ecc5c3c162a7aba29bafa64c8b94b7c.json
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding, System.Int32 bufferSize) [0x00055] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at System.IO.StreamWriter..ctor (System.String path, System.Boolean append, System.Text.Encoding encoding) [0x00000] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamWriter..ctor(string,bool,System.Text.Encoding)
+  at System.IO.File.WriteAllText (System.String path, System.String contents, System.Text.Encoding encoding) [0x00034] in <1071a2cb0cb3433aae80a793c277a048>:0 
+  at UnityEditor.StateCache`1[T].SetState (UnityEngine.Hash128 key, T obj) [0x0004b] in <4b8f645257c94d1296f440a10c6f388e>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.StateCache`1<UnityEditor.Tools/LayerSettings>:SetState (UnityEngine.Hash128,UnityEditor.Tools/LayerSettings)
+UnityEditor.Tools:set_lockedLayers (int)
+UnityEditor.Tools:OnEnable ()
+
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.431 seconds
+Domain Reload Profiling: 2209ms
+	BeginReloadAssembly (269ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (17ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (73ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (426ms)
+		LoadAssemblies (502ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (63ms)
+			TypeCache.Refresh (20ms)
+				TypeCache.ScanAssembly (4ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1432ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (595ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (16ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (87ms)
+			ProcessInitializeOnLoadAttributes (408ms)
+			ProcessInitializeOnLoadMethodAttributes (75ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Toon/Lit Outline' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 18.62 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7548 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.6 MB). Loaded Objects now: 8377.
+Memory consumption went from 262.2 MB to 258.7 MB.
+Total: 6.667600 ms (FindLiveObjects: 0.845900 ms CreateObjectMapping: 0.812900 ms MarkObjects: 3.600200 ms  DeleteObjects: 1.407400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/Dict.cs: e0a51e584485b56d9971a06b4f70ecb4 -> a53f96815da50de15010b1c479bc70cf
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-Editor-firstpass: c7dc8b9ced9189e735622608d643d0a1 -> 7eccaaef97e923e17b24bdc37205cdd9
+  custom:scripting/monoscript/fileName/Geom.cs: 62899da2c8c0264c7a3213c71ab423c8 -> 200e922b9d55286af908f96ae6283612
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/PriorityQueue.cs: e0a51e584485b56d9971a06b4f70ecb4 -> a53f96815da50de15010b1c479bc70cf
+  custom:scripting/monoscript/fileName/VectorClip.cs: dd16a5f633b6df4c71eb593f45afc8bc -> 6c252402ae7a5c8b74369be2920d446b
+  custom:scripting/monoscript/fileName/VectorRectangle.cs: ff5201cfc4685ceadb3d518d33e49b34 -> 94605ea797888ca3c9dd55f0ad5f8bb3
+  custom:scripting/monoscript/fileName/SVGImage.cs: 0f660f39315b25abe6fb64e642647583 -> b14bf8beafbdb3b7c1091451eeba89bf
+  custom:scripting/monoscript/fileName/PriorityHeap.cs: 7a1bd861467893be70bc06dde0a8dd13 -> 7bb74c104c6c91217559563a6ee8b399
+  custom:scripting/monoscript/fileName/VectorScene.cs: 48dcbc54f06da3d44941648c878e18a0 -> 9f0f539377b31c4dbafb895ed60b5ad1
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/SVGStyleSheet.cs: 7ddb6041ccd71eae2e22bfef6ebfee00 -> 88a73273b3e15a5ec15b1ccf7a6ddb88
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/SVGSpriteData.cs: 6d066761fbe160a8c833aa561a630c24 -> 5e8ebbb0f208607ef88254e4021a6699
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/VectorEllipse.cs: ff5201cfc4685ceadb3d518d33e49b34 -> 94605ea797888ca3c9dd55f0ad5f8bb3
+  custom:scripting/monoscript/fileName/SVGImageEditor.cs: 2e9b3eace7e38eb0bcc7961544f65f6c -> 77c73a9da598be422882c873bbc38fe9
+  custom:scripting/monoscript/fileName/Matrix2D.cs: 5cea8fafb620906ee84e7204f80ed5f8 -> 2120ef7015a83c62d01e0726e28d304b
+  custom:scripting/monoscript/fileName/Rig_References.cs: fc5b543509ee4b24b5faeeb25b4234ed -> 7c6259e81a2525a3f5c0f366eac4669d
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/clipper.cs: 2d95cb2bd3fe5d9821e2ad3d1c9a2b31 -> c8889e592969efcca34f0e359ab5910d
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-Editor: 622903df441c48ce54b1885073d338c9 -> 21224b9a9f70fb7489dc7d0c711663d0
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: e0676223c0f68a9f5983836c065c657d -> 7f112f0726d82ca2d30014ae4cdc5e7a
+  custom:scripting/monoscript/fileName/VectorImageBridge.cs: c51b7d70f4d7a33fca0246fb700728cf -> 5736d115e86635d0f02b8b0d649e6901
+  custom:scripting/monoscript/fileName/SVGParser.cs: 30183885b5c4b9f2e861d714cd122683 -> 9f58b96eaad909ad21bdd7385da26ac5
+  custom:scripting/monoscript/fileName/SpriteBridge.cs: 1cc5ade22a5bb8400b8bcc1dd4751330 -> ea46f5ed5af0bdd497d3e2050b2bc2b2
+  custom:scripting/monoscript/fileName/VectorGraphicsEditorBridge.cs: 0caeb4f7d1b28b08db45f3b4350bf472 -> 3abe7ee33fc3ab45bd180f33a8e712c0
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp-firstpass: 658be8a3643a693e3b59a227aa66cb1f -> 3944727bacc4479225f882d496555dec
+  custom:scripting/monoscript/fileName/VectorImageUtils.cs: 1250cbf318106ffe68ef80fd68626f44 -> 200a9095820263109632303a5a96e7d8
+  custom:CustomObjectIndexerAttribute: 3ead1caaecf1c488f20bcfeb224b6af5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/Sweep.cs: c3d5cca8a187a8bd603518d0c8cec197 -> a57835c267040937245279933515af3d
+  custom:scripting/monoscript/fileName/SVGImporterEditor.cs: 5aeca33b621ccf0d0520af75df899bbe -> 3fe339c13b1c63e15398f89e31e00b18
+  custom:scripting/monoscript/fileName/MeshUtils.cs: 1380f16041b11621a7e148a7ce65c5ee -> e0286c614e09809c241a84454c7e1654
+  custom:scripting/monoscript/fileName/VectorSprite.cs: ff5201cfc4685ceadb3d518d33e49b34 -> 94605ea797888ca3c9dd55f0ad5f8bb3
+  custom:scripting/monoscript/fileName/VectorRasterization.cs: a8ff531032ac7d033fc7c90335d90f24 -> 060ec2ae84b429779d1752fa3af64da9
+  custom:scripting/monoscript/fileName/Tess.cs: 808720a47c1c827b45685345ae2a7790 -> 41cca37afd9ac59f6c75cadc3140826c
+  custom:scripting/monoscript/fileName/ControlRigBuilder.cs: 2a565c5a1b2ecd926805b50ad9e8cf63 -> 235a9268baa9393be402e8d42270bb78
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/SVGImporter.cs: 0f56d526ad6e71cbbcc4bd7231dc82d7 -> 96e97d9d60cce65af10adb5dc4a40152
+  custom:scripting/monoscript/fileName/VectorTessellation.cs: 0b5c29f4de5fa5ad4eb680e1ca2189c7 -> 22c6bb5ba939a3a1f406063e1a9548b9
+  custom:scripting/monoscript/fileName/VectorUtils.cs: 971b1a732da1dd3e653a7a6036185b0e -> 077ccef3dd140106d62d8e271b80dcc3
+  custom:scripting/monoscript/fileName/Mesh.cs: f2067ac01f22b62508aebca1f7e7750a -> 26466fc8ea848be0b1105aa76c963fe2
+  custom:scripting/monoscript/fileName/VectorSceneTessellation.cs: c5f0562b52174be7d7637d208d9de7f3 -> 2615d04419cab9a1230532cb19e8704f
